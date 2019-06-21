@@ -2,6 +2,26 @@
 This project includes a generator to build all needed scripts to create 
 JDK and JDK/Maven Docker images. 
 
+## Supported Versions and vendors
+### Vendors
+* OpenJDK
+* Oracle
+* Oracle - GraalVM
+* Amazon
+* IBM
+* Adopt-OpenJ9
+* Zulu
+* Liberica
+
+### JDK Versions (not from all vendors)
+* JDK 6
+* JDK 7
+* JDK 8
+* JDK 10
+* JDK 11
+* JDK 12
+* JDK 13
+
 ## Why basic Docker images again? 
 Different persons or organizations maintain the available "original" Docker images.
 This situation leads to small differences, and this was leading to different behaviour during the usage of these images at runtime. Instead of hunting bugs, I decided to create a clean and straightforward solution. All Docker images are using the open source solution called 
