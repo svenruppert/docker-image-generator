@@ -17,6 +17,7 @@ JDK and JDK/Maven Docker images.
 * JDK 6
 * JDK 7
 * JDK 8
+* JDK 9
 * JDK 10
 * JDK 11
 * JDK 12
