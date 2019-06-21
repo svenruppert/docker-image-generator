@@ -1,19 +1,22 @@
 # Docker Image Generator for JDK and Maven usage
-Generator for generating a bunch of developer docker images.
-This will help you to test your app against a matrix of JDK versions.
+This project includes a generator to build all needed scripts to create 
+JDK and JDK/Maven Docker images. 
 
-## Why
-With the new release cycle that will bring us a new JDK every few months,
-we must decide how to deal with this in a project or product.
-This project will help you to test your application against different JDK
-versions. Based on Jabba, a set of Docker images are generated and pushed to the Docker HUB. 
-If you need a custom image, you can either use the provided images as a base or 
-create your custom ones.
+## Why basic Docker images again? 
+Different persons or organizations maintain the available "original" Docker images.
+This situation leads to small differences, and this was leading to different behaviour during the usage of these images at runtime. Instead of hunting bugs, I decided to create a clean and straightforward solution. All Docker images are using the open source solution called 
+[jabber](https://github.com/shyiko/jabba) to install the JDK.
+A set of Docker images that are built precisely, in the same way, will help you to test your app against a matrix of JDK versions 
+without handling the tiny details that are stealing your time.
+
+## Why do we need so many Docker images?
+With the new release cycle that will bring us a new JDK every few months, we must decide how to deal with this in a project or product.
+The generated Docker images are helping you to test your application against different JDK versions and vendors. All images are created and pushed to the Docker HUB already. 
+If you need a custom image, you can either use the provided images as a base or create your custom ones.
 
 ## How to use
-In the following examples I assume that the project is a 
-maven project. 
-With gradle it should be the same, but maybe different path's.
+In the following examples, I assume that maven organizes the project.
+With gradle, it should be the same, but maybe different paths.
 
 If you need a JDK only
 ```bash
@@ -38,21 +41,22 @@ docker run \
 ```
 
 ## How to generate
-If you want to generate the Dockerfiles by yourself, 
-you should edit the class ```Generator```.
-Inside this class you will find the templates as well. 
-This is not the super duper clean implementation, 
-but it works.
-Fell free to help me and sent a PR. ;-)
+If you want to generate custom Dockerfiles by yourself, 
+it would help if you edited the class ```Generator```.
+Inside this class, you will find the templates as well. 
+This implementation is not the super duper clean application, 
+however, it works.
+Feel free to help me and sent a PR. ;-)
 
 The generated files, including the scripts 
-for generating and pushing the images, 
+for creating and pushing the images, 
 are available under the directory *_data*.
 
 All images are available 
 in the official docker registry.
+Have a look at [https://cloud.docker.com/u/svenruppert/](https://cloud.docker.com/u/svenruppert/)
 
-## Current active JDK versions
+## Current active JDK versions/vendors
 
 1.12.0
 1.12.0-1
