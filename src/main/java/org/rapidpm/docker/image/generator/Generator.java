@@ -20,10 +20,10 @@ public class Generator {
                                              + "\n"
                                              + "ARG MAVEN_VERSION={0}\n"
                                              + "ARG USER_HOME_DIR=\"/root\"\n"
-                                             + "ARG BASE_URL=http://www-eu.apache.org/dist/maven/maven-3/{0}/binaries\n"
+                                             + "ARG BASE_URL=http://mirror.synyx.de/apache/maven/maven-3/{0}/binaries\n"
                                              + "\n"
                                              + "RUN mkdir -p /usr/share/maven /usr/share/maven/ref \\\n"
-                                             + "  && curl -o /tmp/apache-maven.tar.gz http://www-eu.apache.org/dist/maven/maven-3/{0}/binaries/apache-maven-{0}-bin.tar.gz \\\n"
+                                             + "  && curl -o /tmp/apache-maven.tar.gz http://mirror.synyx.de/apache/maven/maven-3/{0}/binaries/apache-maven-{0}-bin.tar.gz \\\n"
                                              + "  && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1 \\\n"
                                              + "  && rm -f /tmp/apache-maven.tar.gz \\\n"
                                              + "  && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn\n"
@@ -269,14 +269,10 @@ public class Generator {
   public static final String MVN_VERSIONS = "3.6.1\n"
                                             + "3.6.0\n"
                                             + "3.5.4\n"
-                                            + "3.5.3\n"
-                                            + "3.5.2\n"
-                                            + "3.5.1\n"
-                                            + "3.5.0\n"
                                             + "3.3.9\n"
-                                            + "3.3.3\n"
-                                            + "3.3.1\n"
-                                            + "3.2.5\n";
+                                            + "3.2.5\n"
+                                            + "3.1.1\n"
+                                            + "3.0.5\n";
 
   //generate this list with -> jabba ls-remote --os linux
   private static String VERSIONS = "1.12.0\n"
