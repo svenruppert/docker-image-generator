@@ -3,19 +3,15 @@ package org.rapidpm.docker.image.generator;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 import static java.text.MessageFormat.format;
-import static java.util.stream.Collectors.toList;
 
 public class Generator {
 
 
   public static final String TARGET = "_data";
-
-  public static final String MVN_VERSION_NR      = "3.6.1";
-  public static final String MVN_VERSION_NR_MAIN = "3.6.1";
 
   //{0} maven version nr : 3.6.1
   //{1} jdk version - adopt-openj9:1.10.0-2
@@ -42,7 +38,7 @@ public class Generator {
   //{1} jdk name - adopt-openj9
   //{2} jdk tag/version nr - 1.10.0-2
   private static final String MVN_BUILD_SH = "if docker_tag_exists svenruppert/maven-{0}-{1} {2}; then\n"
-                                             + "    echo skip building, image already existing\n"
+                                             + "    echo skip building, image already existing - svenruppert/maven-{0}-{1} {2}\n"
                                              + "else\n"
                                              + "    echo start building the images\n"
                                              + "    docker build -t svenruppert/maven-{0}-{1} .\n"
@@ -50,7 +46,6 @@ public class Generator {
                                              + "    docker push svenruppert/maven-{0}-{1}:{2}"
                                              + "\n"
                                              + "fi";
-
 
 
   public static final String DOCKERFILE = "Dockerfile";
@@ -77,55 +72,66 @@ public class Generator {
   //{0} - docker image name openjdk-ri@1.7.75 -> openjdk-ri
   //{1} - image tag openjdk-ri@1.7.75 -> 1.7.75
   private static final String PREFIX_BUILD_SH = "#!/bin/bash\n"
-                           + "function docker_tag_exists() {\n"
-                           + "    EXISTS=$(curl -s  https://hub.docker.com/v2/repositories/$1/tags/?page_size=10000 | jq -r \"[.results | .[] | .name == \\\"$2\\\"] | any\")\n"
-                           + "    test $EXISTS = true\n"
-                           + "}\n";
+                                                + "function docker_tag_exists() {\n"
+                                                + "    EXISTS=$(curl -s  https://hub.docker.com/v2/repositories/$1/tags/?page_size=10000 | jq -r \"[.results | .[] | .name == \\\"$2\\\"] | any\")\n"
+                                                + "    test $EXISTS = true\n"
+                                                + "}\n";
 
 
-  private static final String BUILD_SH =
-               "if docker_tag_exists svenruppert/{0} {1}; then\n"
-               + "    echo skip building, image already existing\n"
-               + "else\n"
-               + "    echo start building the images\n"
-               + "    docker build -t svenruppert/{0} .\n"
-               + "\n"
-               + "    docker tag svenruppert/{0}:latest svenruppert/{0}:{1}\n"
-               + "    docker push svenruppert/{0}:{1}"
-               + "\n"
-               + "fi";
+  private static final String BUILD_SH = "if docker_tag_exists svenruppert/{0} {1}; then\n"
+                                         + "    echo skip building, image already existing - svenruppert/{0}:{1}\n"
+                                         + "else\n"
+                                         + "    echo start building the images\n"
+                                         + "    docker build -t svenruppert/{0} .\n"
+                                         + "\n"
+                                         + "    docker tag svenruppert/{0}:latest svenruppert/{0}:{1}\n"
+                                         + "    docker push svenruppert/{0}:{1}"
+                                         + "\n"
+                                         + "fi";
 
 
   public static void main(String[] args) {
     String[] versionArray = VERSIONS.split("\n");
-    int      length       = versionArray.length;
-    System.out.println("length = " + length);
+    System.out.println("length = " + versionArray.length);
+
+    final String[] mvnVersionArray = MVN_VERSIONS.split("\n");
+
 
     //Dockerfile MVN
-    List<DockerImageInfo> dockerImageInfos = Arrays.stream(versionArray)
-                                                   .map(version -> version.split("@"))
-                                                   .map(v -> {
-                                                     String name = (v.length == 2)
-                                                                   ? v[0]
-                                                                   : "oracle-jdk";
-                                                     String tag = (v.length == 2)
-                                                                  ? v[1]
-                                                                  : v[0];
+    final Map<String, List<DockerImageInfo>> dockerImageInfos = Arrays.stream(versionArray)
+                                                                      .map(version -> version.split("@"))
+                                                                      .flatMap(v -> {
+                                                                        String name = (v.length == 2)
+                                                                                      ? v[0]
+                                                                                      : "oracle-jdk";
+                                                                        String tag = (v.length == 2)
+                                                                                     ? v[1]
+                                                                                     : v[0];
 
-                                                     String version = name + "@" + tag;
-                                                     String buildSH  = PREFIX_BUILD_SH + "\n" + format(BUILD_SH, name, tag);
-                                                     DockerImageInfo info = new DockerImageInfo(
-                                                         format(DOCKER_TEMPLATE, version, (v.length == 2)
-                                                                                          ? version
-                                                                                          : tag),
-                                                         buildSH, version);
-                                                     return info;
-                                                   })
-                                                   .peek(Generator::dockerfileJDK)
-                                                   .peek(Generator::dockerfileMVN)
-                                                   .peek(Generator::buildfileJDK)
-                                                   .peek(Generator::buildfileMVN)
-                                                   .collect(toList());
+                                                                        String version = name + "@" + tag;
+                                                                        String buildSH = PREFIX_BUILD_SH
+                                                                                         + "\n"
+                                                                                         + format(BUILD_SH, name, tag);
+                                                                        return Arrays.stream(mvnVersionArray)
+                                                                                     .map(
+                                                                                         mvnVersion -> new DockerImageInfo(
+                                                                                             format(DOCKER_TEMPLATE,
+                                                                                                    version,
+                                                                                                    (v.length == 2)
+                                                                                                    ? version
+                                                                                                    : tag), buildSH,
+                                                                                             version, mvnVersion));
+
+
+                                                                      })
+                                                                      .peek(Generator::dockerfileJDK)
+                                                                      .peek(Generator::dockerfileMVN)
+                                                                      .peek(Generator::buildfileJDK)
+                                                                      .peek(Generator::buildfileMVN)
+                                                                      .collect(Collectors.groupingBy(
+                                                                          DockerImageInfo::getVersion,
+                                                                          Collectors.toList()));
+//                                                   .collect(toList());
 
 
     final File folder = new File(TARGET);
@@ -133,14 +139,18 @@ public class Generator {
       FileOutputStream fileOutputStream = new FileOutputStream(new File(folder, "build_all.sh"));
       fileOutputStream.write("#!/bin/bash\n".getBytes());
 
-      dockerImageInfos.forEach(p -> {
-        try {
-          fileOutputStream.write(format("cd {0} ; chmod 777 build.sh ; ./build.sh ; cd .. ;\n", p.version).getBytes());
+      dockerImageInfos.keySet()
+                      .stream()
+                      .sorted()
+                      .forEachOrdered(p -> {
+                        try {
+                          fileOutputStream.write(
+                              format("cd {0} ; chmod 777 build.sh ; ./build.sh ; cd .. ;\n", p).getBytes());
 
-        } catch (IOException e) {
-          e.printStackTrace();
-        }
-      });
+                        } catch (IOException e) {
+                          e.printStackTrace();
+                        }
+                      });
       fileOutputStream.close();
     } catch (IOException e) {
       e.printStackTrace();
@@ -150,15 +160,20 @@ public class Generator {
       FileOutputStream fileOutputStream = new FileOutputStream(new File(folder, "build_all_mvn.sh"));
       fileOutputStream.write("#!/bin/bash\n".getBytes());
 
-      dockerImageInfos.forEach(p -> {
-        try {
-          fileOutputStream.write(
-              format("cd {0}_maven ; chmod 777 build.sh ; ./build.sh ; cd .. ;\n", p.version).getBytes());
+      dockerImageInfos.values()
+                      .stream()
+                      .flatMap(Collection::stream)
+                      .sorted(Comparator.comparing(o -> (o.version + "-" + o.versionMvn)))
+                      .forEachOrdered(p -> {
+                        try {
+                          fileOutputStream.write(
+                              format("cd {0}_maven_{1} ; chmod 777 build.sh ; ./build.sh ; cd .. ;\n", p.version,
+                                     p.versionMvn).getBytes());
 
-        } catch (IOException e) {
-          e.printStackTrace();
-        }
-      });
+                        } catch (IOException e) {
+                          e.printStackTrace();
+                        }
+                      });
       fileOutputStream.close();
     } catch (IOException e) {
       e.printStackTrace();
@@ -168,12 +183,12 @@ public class Generator {
   }
 
   private static void dockerfileMVN(DockerImageInfo p) {
-    File folder = new File(TARGET, p.getVersion() + "_maven");
+    File folder = new File(TARGET, p.getVersion() + "_maven_" + p.versionMvn);
     folder.mkdirs();
     try {
       FileOutputStream dockerFileOutputStream = new FileOutputStream(new File(folder, DOCKERFILE));
-      String version = p.version.replace("@", ":");
-      dockerFileOutputStream.write(format(MVN_TEMPLATE, MVN_VERSION_NR, version).getBytes());
+      String           version                = p.version.replace("@", ":");
+      dockerFileOutputStream.write(format(MVN_TEMPLATE, p.versionMvn, version).getBytes());
       dockerFileOutputStream.close();
 
     } catch (IOException e) {
@@ -194,12 +209,12 @@ public class Generator {
   }
 
   private static void buildfileMVN(DockerImageInfo p) {
-    File folder = new File(TARGET, p.getVersion() + "_maven");
+    File folder = new File(TARGET, p.getVersion() + "_maven_" + p.versionMvn);
     folder.mkdirs();
     try {
       FileOutputStream buildFileOutputStream = new FileOutputStream(new File(folder, BUILDFILE));
-      buildFileOutputStream.write(
-          (PREFIX_BUILD_SH + "\n" + format(MVN_BUILD_SH, MVN_VERSION_NR_MAIN, p.version.split("@")[0], p.version.split("@")[1])).getBytes());
+      buildFileOutputStream.write((PREFIX_BUILD_SH + "\n" + format(MVN_BUILD_SH, p.versionMvn, p.version.split("@")[0],
+                                                                   p.version.split("@")[1])).getBytes());
       buildFileOutputStream.close();
     } catch (IOException e) {
       e.printStackTrace();
@@ -224,11 +239,13 @@ public class Generator {
     private String dockerFile;
     private String buildFile;
     private String version;
+    private String versionMvn;
 
-    public DockerImageInfo(String dockerFile, String buildFile, String version) {
+    public DockerImageInfo(String dockerFile, String buildFile, String version, String versionMvn) {
       this.dockerFile = dockerFile;
       this.buildFile  = buildFile;
       this.version    = version;
+      this.versionMvn = versionMvn;
     }
 
     public String getDockerFile() {
@@ -242,7 +259,24 @@ public class Generator {
     public String getVersion() {
       return version;
     }
+
+    public String getVersionMvn() {
+      return versionMvn;
+    }
   }
+
+
+  public static final String MVN_VERSIONS = "3.6.1\n"
+                                            + "3.6.0\n"
+                                            + "3.5.4\n"
+                                            + "3.5.3\n"
+                                            + "3.5.2\n"
+                                            + "3.5.1\n"
+                                            + "3.5.0\n"
+                                            + "3.3.9\n"
+                                            + "3.3.3\n"
+                                            + "3.3.1\n"
+                                            + "3.2.5\n";
 
   //generate this list with -> jabba ls-remote --os linux
   private static String VERSIONS = "1.12.0\n"

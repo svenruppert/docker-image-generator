@@ -23,6 +23,21 @@ JDK and JDK/Maven Docker images.
 * JDK 12
 * JDK 13
 
+
+### MAven Versions
+* 3.6.1
+* 3.6.0
+* 3.5.4
+* 3.5.3
+* 3.5.2
+* 3.5.1
+* 3.5.0
+* 3.3.9
+* 3.3.3
+* 3.3.1
+* 3.2.5
+
+
 ## Why basic Docker images again? 
 Different persons or organizations maintain the available "original" Docker images.
 This situation leads to small differences, and this was leading to different behaviour during the usage of these images at runtime. Instead of hunting bugs, I decided to create a clean and straightforward solution. All Docker images are using the open source solution called 

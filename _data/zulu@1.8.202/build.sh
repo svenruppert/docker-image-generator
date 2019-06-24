@@ -5,7 +5,7 @@ function docker_tag_exists() {
 }
 
 if docker_tag_exists svenruppert/zulu 1.8.202; then
-    echo skip building, image already existing
+    echo skip building, image already existing - svenruppert/zulu:1.8.202
 else
     echo start building the images
     docker build -t svenruppert/zulu .

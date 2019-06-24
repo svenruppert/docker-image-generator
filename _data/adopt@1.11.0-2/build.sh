@@ -5,7 +5,7 @@ function docker_tag_exists() {
 }
 
 if docker_tag_exists svenruppert/adopt 1.11.0-2; then
-    echo skip building, image already existing
+    echo skip building, image already existing - svenruppert/adopt:1.11.0-2
 else
     echo start building the images
     docker build -t svenruppert/adopt .

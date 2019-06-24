@@ -5,7 +5,7 @@ function docker_tag_exists() {
 }
 
 if docker_tag_exists svenruppert/liberica 1.8.212; then
-    echo skip building, image already existing
+    echo skip building, image already existing - svenruppert/liberica:1.8.212
 else
     echo start building the images
     docker build -t svenruppert/liberica .

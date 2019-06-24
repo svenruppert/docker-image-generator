@@ -5,7 +5,7 @@ function docker_tag_exists() {
 }
 
 if docker_tag_exists svenruppert/oracle-jdk 1.12.0; then
-    echo skip building, image already existing
+    echo skip building, image already existing - svenruppert/oracle-jdk:1.12.0
 else
     echo start building the images
     docker build -t svenruppert/oracle-jdk .

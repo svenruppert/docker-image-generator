@@ -5,7 +5,7 @@ function docker_tag_exists() {
 }
 
 if docker_tag_exists svenruppert/openjdk-ri 1.10.0; then
-    echo skip building, image already existing
+    echo skip building, image already existing - svenruppert/openjdk-ri:1.10.0
 else
     echo start building the images
     docker build -t svenruppert/openjdk-ri .

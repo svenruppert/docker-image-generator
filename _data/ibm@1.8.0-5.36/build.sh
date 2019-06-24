@@ -5,7 +5,7 @@ function docker_tag_exists() {
 }
 
 if docker_tag_exists svenruppert/ibm 1.8.0-5.36; then
-    echo skip building, image already existing
+    echo skip building, image already existing - svenruppert/ibm:1.8.0-5.36
 else
     echo start building the images
     docker build -t svenruppert/ibm .

@@ -5,7 +5,7 @@ function docker_tag_exists() {
 }
 
 if docker_tag_exists svenruppert/adopt-openj9 1.11.0-3; then
-    echo skip building, image already existing
+    echo skip building, image already existing - svenruppert/adopt-openj9:1.11.0-3
 else
     echo start building the images
     docker build -t svenruppert/adopt-openj9 .
