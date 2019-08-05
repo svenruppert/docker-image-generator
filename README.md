@@ -22,6 +22,7 @@ JDK and JDK/Maven Docker images.
 * JDK 11
 * JDK 12
 * JDK 13
+* JDK 14
 
 ### Maven Versions
 * 3.6.1
