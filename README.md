@@ -40,7 +40,7 @@ JDK and JDK/Maven Docker images.
 ## Why basic Docker images again? 
 Different persons or organizations maintain the available "original" Docker images.
 This situation leads to small differences, and this was leading to different behaviour during the usage of these images at runtime. Instead of hunting bugs, I decided to create a clean and straightforward solution. All Docker images are using the open source solution called 
-[jabber](https://github.com/shyiko/jabba) to install the JDK.
+[jabba](https://github.com/shyiko/jabba) to install the JDK.
 A set of Docker images that are built precisely, in the same way, will help you to test your app against a matrix of JDK versions 
 without handling the tiny details that are stealing your time.
 
