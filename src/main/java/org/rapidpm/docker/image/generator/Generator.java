@@ -266,7 +266,8 @@ public class Generator {
   }
 
 
-  public static final String MVN_VERSIONS = "3.6.1\n"
+  public static final String MVN_VERSIONS = "3.6.2\n"
+                                            + "3.6.1\n"
                                             + "3.6.0\n"
                                             + "3.5.4\n"
                                             + "3.3.9\n"

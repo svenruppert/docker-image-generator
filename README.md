@@ -91,167 +91,1017 @@ All images are available
 in the official docker registry.
 Have a look at [https://cloud.docker.com/u/svenruppert/](https://cloud.docker.com/u/svenruppert/)
 
-## Current active JDK versions/vendors
+## Pure JDK Docker Images (08.09.2019)
+* svenruppert/adopt-openj9:1.10.0-2
+* svenruppert/adopt-openj9:1.11.0-1
+* svenruppert/adopt-openj9:1.11.0-2
+* svenruppert/adopt-openj9:1.11.0-3
+* svenruppert/adopt-openj9:1.11.0-4
+* svenruppert/adopt-openj9:1.11.28-0
+* svenruppert/adopt-openj9:1.12.0-1
+* svenruppert/adopt-openj9:1.12.0-2
+* svenruppert/adopt-openj9:1.12.33-0
+* svenruppert/adopt-openj9:1.8.162-12
+* svenruppert/adopt-openj9:1.8.181-13
+* svenruppert/adopt-openj9:1.8.192-12
+* svenruppert/adopt-openj9:1.8.202-08
+* svenruppert/adopt-openj9:1.8.212-03
+* svenruppert/adopt-openj9:1.8.212-04
+* svenruppert/adopt-openj9:1.8.222-10
+* svenruppert/adopt-openj9:1.9.0-4
+* svenruppert/adopt:1.10.0-2
+* svenruppert/adopt:1.11.0-1
+* svenruppert/adopt:1.11.0-2
+* svenruppert/adopt:1.11.0-3
+* svenruppert/adopt:1.11.0-4
+* svenruppert/adopt:1.11.28-0
+* svenruppert/adopt:1.12.0-1
+* svenruppert/adopt:1.12.0-2
+* svenruppert/adopt:1.12.33-0
+* svenruppert/adopt:1.8.172-11
+* svenruppert/adopt:1.8.181-13
+* svenruppert/adopt:1.8.192-12
+* svenruppert/adopt:1.8.202-08
+* svenruppert/adopt:1.8.212-03
+* svenruppert/adopt:1.8.212-04
+* svenruppert/adopt:1.8.222-10
+* svenruppert/adopt:1.9.0-4
+* svenruppert/adopt:1.9.181-0
+* svenruppert/amazon-corretto:1.11.0-4.11.1
+* svenruppert/amazon-corretto:1.8.222-10.1
+* svenruppert/graalvm:1.0.0-1
+* svenruppert/graalvm:1.0.0-10
+* svenruppert/graalvm:1.0.0-11
+* svenruppert/graalvm:1.0.0-12
+* svenruppert/graalvm:1.0.0-13
+* svenruppert/graalvm:1.0.0-14
+* svenruppert/graalvm:1.0.0-15
+* svenruppert/graalvm:1.0.0-16
+* svenruppert/graalvm:1.0.0-2
+* svenruppert/graalvm:1.0.0-3
+* svenruppert/graalvm:1.0.0-4
+* svenruppert/graalvm:1.0.0-5
+* svenruppert/graalvm:1.0.0-6
+* svenruppert/graalvm:1.0.0-7
+* svenruppert/graalvm:1.0.0-8
+* svenruppert/graalvm:1.0.0-9
+* svenruppert/graalvm:19.0.0
+* svenruppert/graalvm:19.0.2
+* svenruppert/graalvm:19.1.0
+* svenruppert/graalvm:19.1.1
+* svenruppert/graalvm:19.2.0
+* svenruppert/graalvm:19.2.0-1
+* svenruppert/ibm:1.7.0
+* svenruppert/ibm:1.7.0-10.40
+* svenruppert/ibm:1.7.0-10.45
+* svenruppert/ibm:1.7.0-10.50
+* svenruppert/ibm:1.7.1
+* svenruppert/ibm:1.7.1-4.40
+* svenruppert/ibm:1.7.1-4.45
+* svenruppert/ibm:1.7.1-4.50
+* svenruppert/ibm:1.8.0
+* svenruppert/ibm:1.8.0-5.30
+* svenruppert/ibm:1.8.0-5.31
+* svenruppert/ibm:1.8.0-5.35
+* svenruppert/ibm:1.8.0-5.36
+* svenruppert/ibm:1.8.0-5.37
+* svenruppert/ibm:1.8.0-5.40
+* svenruppert/ibm:1.8.0-5.6
+* svenruppert/ibm:1.8.0-5.7
+* svenruppert/liberica:1.10.0
+* svenruppert/liberica:1.10.0-2
+* svenruppert/liberica:1.11.0
+* svenruppert/liberica:1.11.0-0
+* svenruppert/liberica:1.11.0-1
+* svenruppert/liberica:1.11.0-2
+* svenruppert/liberica:1.11.0-3
+* svenruppert/liberica:1.11.0-4
+* svenruppert/liberica:1.12.0
+* svenruppert/liberica:1.12.0-0
+* svenruppert/liberica:1.12.0-1
+* svenruppert/liberica:1.12.0-2
+* svenruppert/liberica:1.8.192
+* svenruppert/liberica:1.8.202
+* svenruppert/liberica:1.8.212
+* svenruppert/liberica:1.8.222
+* svenruppert/openjdk-ri:1.10.0
+* svenruppert/openjdk-ri:1.10.0-0
+* svenruppert/openjdk-ri:1.11.0
+* svenruppert/openjdk-ri:1.11.0-0
+* svenruppert/openjdk-ri:1.12.0
+* svenruppert/openjdk-ri:1.12.0-0
+* svenruppert/openjdk-ri:1.7.75
+* svenruppert/openjdk-ri:1.8.40
+* svenruppert/openjdk-ri:1.9.0
+* svenruppert/openjdk-ri:1.9.0-0
+* svenruppert/openjdk-shenandoah:1.11.0
+* svenruppert/openjdk-shenandoah:1.8.0
+* svenruppert/openjdk:1.10.0
+* svenruppert/openjdk:1.10.0-1
+* svenruppert/openjdk:1.10.0-2
+* svenruppert/openjdk:1.11.0
+* svenruppert/openjdk:1.11.0-1
+* svenruppert/openjdk:1.11.0-2
+* svenruppert/openjdk:1.12.0
+* svenruppert/openjdk:1.12.0-2
+* svenruppert/openjdk:1.13.0
+* svenruppert/openjdk:1.14.0
+* svenruppert/openjdk:1.9.0
+* svenruppert/openjdk:1.9.0-1
+* svenruppert/openjdk:1.9.0-4
+* svenruppert/oracle-jdk:1.12.0
+* svenruppert/oracle-jdk:1.12.0-2
+* svenruppert/zulu:1.10.0
+* svenruppert/zulu:1.10.0-1
+* svenruppert/zulu:1.10.0-2
+* svenruppert/zulu:1.11.0
+* svenruppert/zulu:1.11.0-1
+* svenruppert/zulu:1.11.0-2
+* svenruppert/zulu:1.11.0-3
+* svenruppert/zulu:1.12.0
+* svenruppert/zulu:1.12.0-1
+* svenruppert/zulu:1.6.103
+* svenruppert/zulu:1.6.107
+* svenruppert/zulu:1.6.113
+* svenruppert/zulu:1.6.119
+* svenruppert/zulu:1.6.77
+* svenruppert/zulu:1.6.79
+* svenruppert/zulu:1.6.83
+* svenruppert/zulu:1.6.87
+* svenruppert/zulu:1.6.89
+* svenruppert/zulu:1.6.93
+* svenruppert/zulu:1.6.97
+* svenruppert/zulu:1.6.99
+* svenruppert/zulu:1.7.101
+* svenruppert/zulu:1.7.111
+* svenruppert/zulu:1.7.121
+* svenruppert/zulu:1.7.131
+* svenruppert/zulu:1.7.141
+* svenruppert/zulu:1.7.154
+* svenruppert/zulu:1.7.161
+* svenruppert/zulu:1.7.171
+* svenruppert/zulu:1.7.181
+* svenruppert/zulu:1.7.191
+* svenruppert/zulu:1.7.201
+* svenruppert/zulu:1.7.211
+* svenruppert/zulu:1.7.222
+* svenruppert/zulu:1.7.95
+* svenruppert/zulu:1.8.102
+* svenruppert/zulu:1.8.112
+* svenruppert/zulu:1.8.121
+* svenruppert/zulu:1.8.131
+* svenruppert/zulu:1.8.144
+* svenruppert/zulu:1.8.152
+* svenruppert/zulu:1.8.162
+* svenruppert/zulu:1.8.163
+* svenruppert/zulu:1.8.172
+* svenruppert/zulu:1.8.181
+* svenruppert/zulu:1.8.192
+* svenruppert/zulu:1.8.201
+* svenruppert/zulu:1.8.202
+* svenruppert/zulu:1.8.212
+* svenruppert/zulu:1.8.71
+* svenruppert/zulu:1.8.72
+* svenruppert/zulu:1.8.91
+* svenruppert/zulu:1.8.92
+* svenruppert/zulu:1.9.0
+* svenruppert/zulu:1.9.0-0
+* svenruppert/zulu:1.9.0-1
+* svenruppert/zulu:1.9.0-4
+* svenruppert/zulu:1.9.0-7
 
-1.12.0
-1.12.0-1
-adopt@1.12.33-0
-adopt@1.12.0-1
-adopt@1.11.28-0
-adopt@1.11.0-3
-adopt@1.11.0-2
-adopt@1.11.0-1
-adopt@1.10.0-2
-adopt@1.9.181-0
-adopt@1.9.0-4
-adopt@1.8.212-04
-adopt@1.8.212-03
-adopt@1.8.202-08
-adopt@1.8.192-12
-adopt@1.8.181-13
-adopt@1.8.172-11
-adopt-openj9@1.12.33-0
-adopt-openj9@1.12.0-1
-adopt-openj9@1.11.28-0
-adopt-openj9@1.11.0-3
-adopt-openj9@1.11.0-2
-adopt-openj9@1.11.0-1
-adopt-openj9@1.10.0-2
-adopt-openj9@1.9.0-4
-adopt-openj9@1.8.212-04
-adopt-openj9@1.8.212-03
-adopt-openj9@1.8.202-08
-adopt-openj9@1.8.192-12
-adopt-openj9@1.8.181-13
-adopt-openj9@1.8.162-12
-amazon-corretto@1.11.0-3.7.1
-amazon-corretto@1.8.212-04.2
-graalvm@19.0.0
-graalvm@1.0.0-16
-graalvm@1.0.0-15
-graalvm@1.0.0-14
-graalvm@1.0.0-13
-graalvm@1.0.0-12
-graalvm@1.0.0-11
-graalvm@1.0.0-10
-graalvm@1.0.0-9
-graalvm@1.0.0-8
-graalvm@1.0.0-7
-graalvm@1.0.0-6
-graalvm@1.0.0-5
-graalvm@1.0.0-4
-graalvm@1.0.0-3
-graalvm@1.0.0-2
-graalvm@1.0.0-1
-ibm@1.8.0
-ibm@1.8.0-5.36
-ibm@1.8.0-5.35
-ibm@1.8.0-5.31
-ibm@1.8.0-5.30
-ibm@1.8.0-5.7
-ibm@1.8.0-5.6
-ibm@1.7.1
-ibm@1.7.1-4.45
-ibm@1.7.1-4.40
-ibm@1.7.0
-ibm@1.7.0-10.45
-ibm@1.7.0-10.40
-liberica@1.12.0
-liberica@1.12.0-1
-liberica@1.12.0-0
-liberica@1.11.0
-liberica@1.11.0-3
-liberica@1.11.0-2
-liberica@1.11.0-1
-liberica@1.11.0-0
-liberica@1.10.0
-liberica@1.10.0-2
-liberica@1.8.212
-liberica@1.8.202
-liberica@1.8.192
-openjdk@1.13.0
-openjdk@1.13.0-24
-openjdk@1.12.0
-openjdk@1.12.0-1
-openjdk@1.11.0
-openjdk@1.11.0-2
-openjdk@1.11.0-1
-openjdk@1.10.0
-openjdk@1.10.0-2
-openjdk@1.10.0-1
-openjdk@1.9.0
-openjdk@1.9.0-4
-openjdk@1.9.0-1
-openjdk-ri@1.12.0
-openjdk-ri@1.12.0-0
-openjdk-ri@1.11.0
-openjdk-ri@1.11.0-0
-openjdk-ri@1.10.0
-openjdk-ri@1.10.0-0
-openjdk-ri@1.9.0
-openjdk-ri@1.9.0-0
-openjdk-ri@1.8.40
-openjdk-ri@1.7.75
-openjdk-shenandoah@1.11.0
-openjdk-shenandoah@1.8.0
-zulu@1.12.0
-zulu@1.12.0-1
-zulu@1.11.0
-zulu@1.11.0-3
-zulu@1.11.0-2
-zulu@1.11.0-1
-zulu@1.10.0
-zulu@1.10.0-2
-zulu@1.10.0-1
-zulu@1.9.0
-zulu@1.9.0-7
-zulu@1.9.0-4
-zulu@1.9.0-1
-zulu@1.9.0-0
-zulu@1.8.212
-zulu@1.8.202
-zulu@1.8.201
-zulu@1.8.192
-zulu@1.8.181
-zulu@1.8.172
-zulu@1.8.163
-zulu@1.8.162
-zulu@1.8.152
-zulu@1.8.144
-zulu@1.8.131
-zulu@1.8.121
-zulu@1.8.112
-zulu@1.8.102
-zulu@1.8.92
-zulu@1.8.91
-zulu@1.8.72
-zulu@1.8.71
-zulu@1.7.222
-zulu@1.7.211
-zulu@1.7.201
-zulu@1.7.191
-zulu@1.7.181
-zulu@1.7.171
-zulu@1.7.161
-zulu@1.7.154
-zulu@1.7.141
-zulu@1.7.131
-zulu@1.7.121
-zulu@1.7.111
-zulu@1.7.101
-zulu@1.7.95
-zulu@1.6.119
-zulu@1.6.113
-zulu@1.6.107
-zulu@1.6.103
-zulu@1.6.99
-zulu@1.6.97
-zulu@1.6.93
-zulu@1.6.89
-zulu@1.6.87
-zulu@1.6.83
-zulu@1.6.79
-zulu@1.6.77
+## Maven JDK Docker Images (08.09.2019)
+
+* svenruppert/maven-3.6.1-ibm 1.8.0-5.40
+* svenruppert/maven-3.6.2-ibm 1.8.0-5.40
+* svenruppert/maven-3.0.5-ibm 1.8.0-5.6
+* svenruppert/maven-3.1.1-ibm 1.8.0-5.6
+* svenruppert/maven-3.2.5-ibm 1.8.0-5.6
+* svenruppert/maven-3.3.9-ibm 1.8.0-5.6
+* svenruppert/maven-3.5.4-ibm 1.8.0-5.6
+* svenruppert/maven-3.6.0-ibm 1.8.0-5.6
+* svenruppert/maven-3.6.1-ibm 1.8.0-5.6
+* svenruppert/maven-3.6.2-ibm 1.8.0-5.6
+* svenruppert/maven-3.0.5-ibm 1.8.0-5.7
+* svenruppert/maven-3.1.1-ibm 1.8.0-5.7
+* svenruppert/maven-3.2.5-ibm 1.8.0-5.7
+* svenruppert/maven-3.3.9-ibm 1.8.0-5.7
+* svenruppert/maven-3.5.4-ibm 1.8.0-5.7
+* svenruppert/maven-3.6.0-ibm 1.8.0-5.7
+* svenruppert/maven-3.6.1-ibm 1.8.0-5.7
+* svenruppert/maven-3.6.2-ibm 1.8.0-5.7
+* svenruppert/maven-3.0.5-liberica 1.10.0-2
+* svenruppert/maven-3.1.1-liberica 1.10.0-2
+* svenruppert/maven-3.2.5-liberica 1.10.0-2
+* svenruppert/maven-3.3.9-liberica 1.10.0-2
+* svenruppert/maven-3.5.4-liberica 1.10.0-2
+* svenruppert/maven-3.6.0-liberica 1.10.0-2
+* svenruppert/maven-3.6.1-liberica 1.10.0-2
+* svenruppert/maven-3.6.2-liberica 1.10.0-2
+* svenruppert/maven-3.0.5-liberica 1.10.0
+* svenruppert/maven-3.1.1-liberica 1.10.0
+* svenruppert/maven-3.2.5-liberica 1.10.0
+* svenruppert/maven-3.3.9-liberica 1.10.0
+* svenruppert/maven-3.5.4-liberica 1.10.0
+* svenruppert/maven-3.6.0-liberica 1.10.0
+* svenruppert/maven-3.6.1-liberica 1.10.0
+* svenruppert/maven-3.6.2-liberica 1.10.0
+* svenruppert/maven-3.0.5-liberica 1.11.0-0
+* svenruppert/maven-3.1.1-liberica 1.11.0-0
+* svenruppert/maven-3.2.5-liberica 1.11.0-0
+* svenruppert/maven-3.3.9-liberica 1.11.0-0
+* svenruppert/maven-3.5.4-liberica 1.11.0-0
+* svenruppert/maven-3.6.0-liberica 1.11.0-0
+* svenruppert/maven-3.6.1-liberica 1.11.0-0
+* svenruppert/maven-3.6.2-liberica 1.11.0-0
+* svenruppert/maven-3.0.5-liberica 1.11.0-1
+* svenruppert/maven-3.1.1-liberica 1.11.0-1
+* svenruppert/maven-3.2.5-liberica 1.11.0-1
+* svenruppert/maven-3.3.9-liberica 1.11.0-1
+* svenruppert/maven-3.5.4-liberica 1.11.0-1
+* svenruppert/maven-3.6.0-liberica 1.11.0-1
+* svenruppert/maven-3.6.1-liberica 1.11.0-1
+* svenruppert/maven-3.6.2-liberica 1.11.0-1
+* svenruppert/maven-3.0.5-liberica 1.11.0-2
+* svenruppert/maven-3.1.1-liberica 1.11.0-2
+* svenruppert/maven-3.2.5-liberica 1.11.0-2
+* svenruppert/maven-3.3.9-liberica 1.11.0-2
+* svenruppert/maven-3.5.4-liberica 1.11.0-2
+* svenruppert/maven-3.6.0-liberica 1.11.0-2
+* svenruppert/maven-3.6.1-liberica 1.11.0-2
+* svenruppert/maven-3.6.2-liberica 1.11.0-2
+* svenruppert/maven-3.0.5-liberica 1.11.0-3
+* svenruppert/maven-3.1.1-liberica 1.11.0-3
+* svenruppert/maven-3.2.5-liberica 1.11.0-3
+* svenruppert/maven-3.3.9-liberica 1.11.0-3
+* svenruppert/maven-3.5.4-liberica 1.11.0-3
+* svenruppert/maven-3.6.0-liberica 1.11.0-3
+* svenruppert/maven-3.6.1-liberica 1.11.0-3
+* svenruppert/maven-3.6.2-liberica 1.11.0-3
+* svenruppert/maven-3.0.5-liberica 1.11.0
+* svenruppert/maven-3.1.1-liberica 1.11.0
+* svenruppert/maven-3.2.5-liberica 1.11.0
+* svenruppert/maven-3.3.9-liberica 1.11.0
+* svenruppert/maven-3.5.4-liberica 1.11.0
+* svenruppert/maven-3.6.0-liberica 1.11.0
+* svenruppert/maven-3.6.1-liberica 1.11.0
+* svenruppert/maven-3.6.2-liberica 1.11.0
+* svenruppert/maven-3.0.5-liberica 1.11.0-4
+* svenruppert/maven-3.1.1-liberica 1.11.0-4
+* svenruppert/maven-3.2.5-liberica 1.11.0-4
+* svenruppert/maven-3.3.9-liberica 1.11.0-4
+* svenruppert/maven-3.5.4-liberica 1.11.0-4
+* svenruppert/maven-3.6.0-liberica 1.11.0-4
+* svenruppert/maven-3.6.1-liberica 1.11.0-4
+* svenruppert/maven-3.6.2-liberica 1.11.0-4
+* svenruppert/maven-3.0.5-liberica 1.12.0-0
+* svenruppert/maven-3.1.1-liberica 1.12.0-0
+* svenruppert/maven-3.2.5-liberica 1.12.0-0
+* svenruppert/maven-3.3.9-liberica 1.12.0-0
+* svenruppert/maven-3.5.4-liberica 1.12.0-0
+* svenruppert/maven-3.6.0-liberica 1.12.0-0
+* svenruppert/maven-3.6.1-liberica 1.12.0-0
+* svenruppert/maven-3.6.2-liberica 1.12.0-0
+* svenruppert/maven-3.0.5-liberica 1.12.0-1
+* svenruppert/maven-3.1.1-liberica 1.12.0-1
+* svenruppert/maven-3.2.5-liberica 1.12.0-1
+* svenruppert/maven-3.3.9-liberica 1.12.0-1
+* svenruppert/maven-3.5.4-liberica 1.12.0-1
+* svenruppert/maven-3.6.0-liberica 1.12.0-1
+* svenruppert/maven-3.6.1-liberica 1.12.0-1
+* svenruppert/maven-3.6.2-liberica 1.12.0-1
+* svenruppert/maven-3.0.5-liberica 1.12.0-2
+* svenruppert/maven-3.1.1-liberica 1.12.0-2
+* svenruppert/maven-3.2.5-liberica 1.12.0-2
+* svenruppert/maven-3.3.9-liberica 1.12.0-2
+* svenruppert/maven-3.5.4-liberica 1.12.0-2
+* svenruppert/maven-3.6.0-liberica 1.12.0-2
+* svenruppert/maven-3.6.1-liberica 1.12.0-2
+* svenruppert/maven-3.6.2-liberica 1.12.0-2
+* svenruppert/maven-3.0.5-liberica 1.12.0
+* svenruppert/maven-3.1.1-liberica 1.12.0
+* svenruppert/maven-3.2.5-liberica 1.12.0
+* svenruppert/maven-3.3.9-liberica 1.12.0
+* svenruppert/maven-3.5.4-liberica 1.12.0
+* svenruppert/maven-3.6.0-liberica 1.12.0
+* svenruppert/maven-3.6.1-liberica 1.12.0
+* svenruppert/maven-3.6.2-liberica 1.12.0
+* svenruppert/maven-3.0.5-liberica 1.8.192
+* svenruppert/maven-3.1.1-liberica 1.8.192
+* svenruppert/maven-3.2.5-liberica 1.8.192
+* svenruppert/maven-3.3.9-liberica 1.8.192
+* svenruppert/maven-3.5.4-liberica 1.8.192
+* svenruppert/maven-3.6.0-liberica 1.8.192
+* svenruppert/maven-3.6.1-liberica 1.8.192
+* svenruppert/maven-3.6.2-liberica 1.8.192
+* svenruppert/maven-3.0.5-liberica 1.8.202
+* svenruppert/maven-3.1.1-liberica 1.8.202
+* svenruppert/maven-3.2.5-liberica 1.8.202
+* svenruppert/maven-3.3.9-liberica 1.8.202
+* svenruppert/maven-3.5.4-liberica 1.8.202
+* svenruppert/maven-3.6.0-liberica 1.8.202
+* svenruppert/maven-3.6.1-liberica 1.8.202
+* svenruppert/maven-3.6.2-liberica 1.8.202
+* svenruppert/maven-3.0.5-liberica 1.8.212
+* svenruppert/maven-3.1.1-liberica 1.8.212
+* svenruppert/maven-3.2.5-liberica 1.8.212
+* svenruppert/maven-3.3.9-liberica 1.8.212
+* svenruppert/maven-3.5.4-liberica 1.8.212
+* svenruppert/maven-3.6.0-liberica 1.8.212
+* svenruppert/maven-3.6.1-liberica 1.8.212
+* svenruppert/maven-3.6.2-liberica 1.8.212
+* svenruppert/maven-3.0.5-liberica 1.8.222
+* svenruppert/maven-3.1.1-liberica 1.8.222
+* svenruppert/maven-3.2.5-liberica 1.8.222
+* svenruppert/maven-3.3.9-liberica 1.8.222
+* svenruppert/maven-3.5.4-liberica 1.8.222
+* svenruppert/maven-3.6.0-liberica 1.8.222
+* svenruppert/maven-3.6.1-liberica 1.8.222
+* svenruppert/maven-3.6.2-liberica 1.8.222
+* svenruppert/maven-3.0.5-openjdk-ri 1.10.0-0
+* svenruppert/maven-3.1.1-openjdk-ri 1.10.0-0
+* svenruppert/maven-3.2.5-openjdk-ri 1.10.0-0
+* svenruppert/maven-3.3.9-openjdk-ri 1.10.0-0
+* svenruppert/maven-3.5.4-openjdk-ri 1.10.0-0
+* svenruppert/maven-3.6.0-openjdk-ri 1.10.0-0
+* svenruppert/maven-3.6.1-openjdk-ri 1.10.0-0
+* svenruppert/maven-3.6.2-openjdk-ri 1.10.0-0
+* svenruppert/maven-3.0.5-openjdk-ri 1.10.0
+* svenruppert/maven-3.1.1-openjdk-ri 1.10.0
+* svenruppert/maven-3.2.5-openjdk-ri 1.10.0
+* svenruppert/maven-3.3.9-openjdk-ri 1.10.0
+* svenruppert/maven-3.5.4-openjdk-ri 1.10.0
+* svenruppert/maven-3.6.0-openjdk-ri 1.10.0
+* svenruppert/maven-3.6.1-openjdk-ri 1.10.0
+* svenruppert/maven-3.6.2-openjdk-ri 1.10.0
+* svenruppert/maven-3.0.5-openjdk-ri 1.11.0-0
+* svenruppert/maven-3.1.1-openjdk-ri 1.11.0-0
+* svenruppert/maven-3.2.5-openjdk-ri 1.11.0-0
+* svenruppert/maven-3.3.9-openjdk-ri 1.11.0-0
+* svenruppert/maven-3.5.4-openjdk-ri 1.11.0-0
+* svenruppert/maven-3.6.0-openjdk-ri 1.11.0-0
+* svenruppert/maven-3.6.1-openjdk-ri 1.11.0-0
+* svenruppert/maven-3.6.2-openjdk-ri 1.11.0-0
+* svenruppert/maven-3.0.5-openjdk-ri 1.11.0
+* svenruppert/maven-3.1.1-openjdk-ri 1.11.0
+* svenruppert/maven-3.2.5-openjdk-ri 1.11.0
+* svenruppert/maven-3.3.9-openjdk-ri 1.11.0
+* svenruppert/maven-3.5.4-openjdk-ri 1.11.0
+* svenruppert/maven-3.6.0-openjdk-ri 1.11.0
+* svenruppert/maven-3.6.1-openjdk-ri 1.11.0
+* svenruppert/maven-3.6.2-openjdk-ri 1.11.0
+* svenruppert/maven-3.0.5-openjdk-ri 1.12.0-0
+* svenruppert/maven-3.1.1-openjdk-ri 1.12.0-0
+* svenruppert/maven-3.2.5-openjdk-ri 1.12.0-0
+* svenruppert/maven-3.3.9-openjdk-ri 1.12.0-0
+* svenruppert/maven-3.5.4-openjdk-ri 1.12.0-0
+* svenruppert/maven-3.6.0-openjdk-ri 1.12.0-0
+* svenruppert/maven-3.6.1-openjdk-ri 1.12.0-0
+* svenruppert/maven-3.6.2-openjdk-ri 1.12.0-0
+* svenruppert/maven-3.0.5-openjdk-ri 1.12.0
+* svenruppert/maven-3.1.1-openjdk-ri 1.12.0
+* svenruppert/maven-3.2.5-openjdk-ri 1.12.0
+* svenruppert/maven-3.3.9-openjdk-ri 1.12.0
+* svenruppert/maven-3.5.4-openjdk-ri 1.12.0
+* svenruppert/maven-3.6.0-openjdk-ri 1.12.0
+* svenruppert/maven-3.6.1-openjdk-ri 1.12.0
+* svenruppert/maven-3.6.2-openjdk-ri 1.12.0
+* svenruppert/maven-3.0.5-openjdk-ri 1.7.75
+* svenruppert/maven-3.1.1-openjdk-ri 1.7.75
+* svenruppert/maven-3.2.5-openjdk-ri 1.7.75
+* svenruppert/maven-3.3.9-openjdk-ri 1.7.75
+* svenruppert/maven-3.5.4-openjdk-ri 1.7.75
+* svenruppert/maven-3.6.0-openjdk-ri 1.7.75
+* svenruppert/maven-3.6.1-openjdk-ri 1.7.75
+* svenruppert/maven-3.6.2-openjdk-ri 1.7.75
+* svenruppert/maven-3.0.5-openjdk-ri 1.8.40
+* svenruppert/maven-3.1.1-openjdk-ri 1.8.40
+* svenruppert/maven-3.2.5-openjdk-ri 1.8.40
+* svenruppert/maven-3.3.9-openjdk-ri 1.8.40
+* svenruppert/maven-3.5.4-openjdk-ri 1.8.40
+* svenruppert/maven-3.6.0-openjdk-ri 1.8.40
+* svenruppert/maven-3.6.1-openjdk-ri 1.8.40
+* svenruppert/maven-3.6.2-openjdk-ri 1.8.40
+* svenruppert/maven-3.0.5-openjdk-ri 1.9.0-0
+* svenruppert/maven-3.1.1-openjdk-ri 1.9.0-0
+* svenruppert/maven-3.2.5-openjdk-ri 1.9.0-0
+* svenruppert/maven-3.3.9-openjdk-ri 1.9.0-0
+* svenruppert/maven-3.5.4-openjdk-ri 1.9.0-0
+* svenruppert/maven-3.6.0-openjdk-ri 1.9.0-0
+* svenruppert/maven-3.6.1-openjdk-ri 1.9.0-0
+* svenruppert/maven-3.6.2-openjdk-ri 1.9.0-0
+* svenruppert/maven-3.0.5-openjdk-ri 1.9.0
+* svenruppert/maven-3.1.1-openjdk-ri 1.9.0
+* svenruppert/maven-3.2.5-openjdk-ri 1.9.0
+* svenruppert/maven-3.3.9-openjdk-ri 1.9.0
+* svenruppert/maven-3.5.4-openjdk-ri 1.9.0
+* svenruppert/maven-3.6.0-openjdk-ri 1.9.0
+* svenruppert/maven-3.6.1-openjdk-ri 1.9.0
+* svenruppert/maven-3.6.2-openjdk-ri 1.9.0
+* svenruppert/maven-3.0.5-openjdk-shenandoah 1.11.0
+* svenruppert/maven-3.1.1-openjdk-shenandoah 1.11.0
+* svenruppert/maven-3.2.5-openjdk-shenandoah 1.11.0
+* svenruppert/maven-3.3.9-openjdk-shenandoah 1.11.0
+* svenruppert/maven-3.5.4-openjdk-shenandoah 1.11.0
+* svenruppert/maven-3.6.0-openjdk-shenandoah 1.11.0
+* svenruppert/maven-3.6.1-openjdk-shenandoah 1.11.0
+* svenruppert/maven-3.6.2-openjdk-shenandoah 1.11.0
+* svenruppert/maven-3.0.5-openjdk-shenandoah 1.8.0
+* svenruppert/maven-3.1.1-openjdk-shenandoah 1.8.0
+* svenruppert/maven-3.2.5-openjdk-shenandoah 1.8.0
+* svenruppert/maven-3.3.9-openjdk-shenandoah 1.8.0
+* svenruppert/maven-3.5.4-openjdk-shenandoah 1.8.0
+* svenruppert/maven-3.6.0-openjdk-shenandoah 1.8.0
+* svenruppert/maven-3.6.1-openjdk-shenandoah 1.8.0
+* svenruppert/maven-3.6.2-openjdk-shenandoah 1.8.0
+* svenruppert/maven-3.0.5-openjdk 1.10.0-1
+* svenruppert/maven-3.1.1-openjdk 1.10.0-1
+* svenruppert/maven-3.2.5-openjdk 1.10.0-1
+* svenruppert/maven-3.3.9-openjdk 1.10.0-1
+* svenruppert/maven-3.5.4-openjdk 1.10.0-1
+* svenruppert/maven-3.6.0-openjdk 1.10.0-1
+* svenruppert/maven-3.6.1-openjdk 1.10.0-1
+* svenruppert/maven-3.6.2-openjdk 1.10.0-1
+* svenruppert/maven-3.0.5-openjdk 1.10.0-2
+* svenruppert/maven-3.1.1-openjdk 1.10.0-2
+* svenruppert/maven-3.2.5-openjdk 1.10.0-2
+* svenruppert/maven-3.3.9-openjdk 1.10.0-2
+* svenruppert/maven-3.5.4-openjdk 1.10.0-2
+* svenruppert/maven-3.6.0-openjdk 1.10.0-2
+* svenruppert/maven-3.6.1-openjdk 1.10.0-2
+* svenruppert/maven-3.6.2-openjdk 1.10.0-2
+* svenruppert/maven-3.0.5-openjdk 1.10.0
+* svenruppert/maven-3.1.1-openjdk 1.10.0
+* svenruppert/maven-3.2.5-openjdk 1.10.0
+* svenruppert/maven-3.3.9-openjdk 1.10.0
+* svenruppert/maven-3.5.4-openjdk 1.10.0
+* svenruppert/maven-3.6.0-openjdk 1.10.0
+* svenruppert/maven-3.6.1-openjdk 1.10.0
+* svenruppert/maven-3.6.2-openjdk 1.10.0
+* svenruppert/maven-3.0.5-openjdk 1.11.0-1
+* svenruppert/maven-3.1.1-openjdk 1.11.0-1
+* svenruppert/maven-3.2.5-openjdk 1.11.0-1
+* svenruppert/maven-3.3.9-openjdk 1.11.0-1
+* svenruppert/maven-3.5.4-openjdk 1.11.0-1
+* svenruppert/maven-3.6.0-openjdk 1.11.0-1
+* svenruppert/maven-3.6.1-openjdk 1.11.0-1
+* svenruppert/maven-3.6.2-openjdk 1.11.0-1
+* svenruppert/maven-3.0.5-openjdk 1.11.0-2
+* svenruppert/maven-3.1.1-openjdk 1.11.0-2
+* svenruppert/maven-3.2.5-openjdk 1.11.0-2
+* svenruppert/maven-3.3.9-openjdk 1.11.0-2
+* svenruppert/maven-3.5.4-openjdk 1.11.0-2
+* svenruppert/maven-3.6.0-openjdk 1.11.0-2
+* svenruppert/maven-3.6.1-openjdk 1.11.0-2
+* svenruppert/maven-3.6.2-openjdk 1.11.0-2
+* svenruppert/maven-3.0.5-openjdk 1.11.0
+* svenruppert/maven-3.1.1-openjdk 1.11.0
+* svenruppert/maven-3.2.5-openjdk 1.11.0
+* svenruppert/maven-3.3.9-openjdk 1.11.0
+* svenruppert/maven-3.5.4-openjdk 1.11.0
+* svenruppert/maven-3.6.0-openjdk 1.11.0
+* svenruppert/maven-3.6.1-openjdk 1.11.0
+* svenruppert/maven-3.6.2-openjdk 1.11.0
+* svenruppert/maven-3.0.5-openjdk 1.12.0-2
+* svenruppert/maven-3.1.1-openjdk 1.12.0-2
+* svenruppert/maven-3.2.5-openjdk 1.12.0-2
+* svenruppert/maven-3.3.9-openjdk 1.12.0-2
+* svenruppert/maven-3.5.4-openjdk 1.12.0-2
+* svenruppert/maven-3.6.0-openjdk 1.12.0-2
+* svenruppert/maven-3.6.1-openjdk 1.12.0-2
+* svenruppert/maven-3.6.2-openjdk 1.12.0-2
+* svenruppert/maven-3.0.5-openjdk 1.12.0
+* svenruppert/maven-3.1.1-openjdk 1.12.0
+* svenruppert/maven-3.2.5-openjdk 1.12.0
+* svenruppert/maven-3.3.9-openjdk 1.12.0
+* svenruppert/maven-3.5.4-openjdk 1.12.0
+* svenruppert/maven-3.6.0-openjdk 1.12.0
+* svenruppert/maven-3.6.1-openjdk 1.12.0
+* svenruppert/maven-3.6.2-openjdk 1.12.0
+* svenruppert/maven-3.0.5-openjdk 1.13.0
+* svenruppert/maven-3.1.1-openjdk 1.13.0
+* svenruppert/maven-3.2.5-openjdk 1.13.0
+* svenruppert/maven-3.3.9-openjdk 1.13.0
+* svenruppert/maven-3.5.4-openjdk 1.13.0
+* svenruppert/maven-3.6.0-openjdk 1.13.0
+* svenruppert/maven-3.6.1-openjdk 1.13.0
+* svenruppert/maven-3.6.2-openjdk 1.13.0
+* svenruppert/maven-3.0.5-openjdk 1.14.0
+* svenruppert/maven-3.1.1-openjdk 1.14.0
+* svenruppert/maven-3.2.5-openjdk 1.14.0
+* svenruppert/maven-3.3.9-openjdk 1.14.0
+* svenruppert/maven-3.5.4-openjdk 1.14.0
+* svenruppert/maven-3.6.0-openjdk 1.14.0
+* svenruppert/maven-3.6.1-openjdk 1.14.0
+* svenruppert/maven-3.6.2-openjdk 1.14.0
+* svenruppert/maven-3.0.5-openjdk 1.9.0-1
+* svenruppert/maven-3.1.1-openjdk 1.9.0-1
+* svenruppert/maven-3.2.5-openjdk 1.9.0-1
+* svenruppert/maven-3.3.9-openjdk 1.9.0-1
+* svenruppert/maven-3.5.4-openjdk 1.9.0-1
+* svenruppert/maven-3.6.0-openjdk 1.9.0-1
+* svenruppert/maven-3.6.1-openjdk 1.9.0-1
+* svenruppert/maven-3.6.2-openjdk 1.9.0-1
+* svenruppert/maven-3.0.5-openjdk 1.9.0
+* svenruppert/maven-3.1.1-openjdk 1.9.0
+* svenruppert/maven-3.2.5-openjdk 1.9.0
+* svenruppert/maven-3.3.9-openjdk 1.9.0
+* svenruppert/maven-3.5.4-openjdk 1.9.0
+* svenruppert/maven-3.6.0-openjdk 1.9.0
+* svenruppert/maven-3.6.1-openjdk 1.9.0
+* svenruppert/maven-3.6.2-openjdk 1.9.0
+* svenruppert/maven-3.0.5-openjdk 1.9.0-4
+* svenruppert/maven-3.1.1-openjdk 1.9.0-4
+* svenruppert/maven-3.2.5-openjdk 1.9.0-4
+* svenruppert/maven-3.3.9-openjdk 1.9.0-4
+* svenruppert/maven-3.5.4-openjdk 1.9.0-4
+* svenruppert/maven-3.6.0-openjdk 1.9.0-4
+* svenruppert/maven-3.6.1-openjdk 1.9.0-4
+* svenruppert/maven-3.6.2-openjdk 1.9.0-4
+* svenruppert/maven-3.0.5-oracle-jdk 1.12.0-2
+* svenruppert/maven-3.1.1-oracle-jdk 1.12.0-2
+* svenruppert/maven-3.2.5-oracle-jdk 1.12.0-2
+* svenruppert/maven-3.3.9-oracle-jdk 1.12.0-2
+* svenruppert/maven-3.5.4-oracle-jdk 1.12.0-2
+* svenruppert/maven-3.6.0-oracle-jdk 1.12.0-2
+* svenruppert/maven-3.6.1-oracle-jdk 1.12.0-2
+* svenruppert/maven-3.6.2-oracle-jdk 1.12.0-2
+* svenruppert/maven-3.0.5-oracle-jdk 1.12.0
+* svenruppert/maven-3.1.1-oracle-jdk 1.12.0
+* svenruppert/maven-3.2.5-oracle-jdk 1.12.0
+* svenruppert/maven-3.3.9-oracle-jdk 1.12.0
+* svenruppert/maven-3.5.4-oracle-jdk 1.12.0
+* svenruppert/maven-3.6.0-oracle-jdk 1.12.0
+* svenruppert/maven-3.6.1-oracle-jdk 1.12.0
+* svenruppert/maven-3.6.2-oracle-jdk 1.12.0
+* svenruppert/maven-3.0.5-zulu 1.10.0-1
+* svenruppert/maven-3.1.1-zulu 1.10.0-1
+* svenruppert/maven-3.2.5-zulu 1.10.0-1
+* svenruppert/maven-3.3.9-zulu 1.10.0-1
+* svenruppert/maven-3.5.4-zulu 1.10.0-1
+* svenruppert/maven-3.6.0-zulu 1.10.0-1
+* svenruppert/maven-3.6.1-zulu 1.10.0-1
+* svenruppert/maven-3.6.2-zulu 1.10.0-1
+* svenruppert/maven-3.0.5-zulu 1.10.0-2
+* svenruppert/maven-3.1.1-zulu 1.10.0-2
+* svenruppert/maven-3.2.5-zulu 1.10.0-2
+* svenruppert/maven-3.3.9-zulu 1.10.0-2
+* svenruppert/maven-3.5.4-zulu 1.10.0-2
+* svenruppert/maven-3.6.0-zulu 1.10.0-2
+* svenruppert/maven-3.6.1-zulu 1.10.0-2
+* svenruppert/maven-3.6.2-zulu 1.10.0-2
+* svenruppert/maven-3.0.5-zulu 1.10.0
+* svenruppert/maven-3.1.1-zulu 1.10.0
+* svenruppert/maven-3.2.5-zulu 1.10.0
+* svenruppert/maven-3.3.9-zulu 1.10.0
+* svenruppert/maven-3.5.4-zulu 1.10.0
+* svenruppert/maven-3.6.0-zulu 1.10.0
+* svenruppert/maven-3.6.1-zulu 1.10.0
+* svenruppert/maven-3.6.2-zulu 1.10.0
+* svenruppert/maven-3.0.5-zulu 1.11.0-1
+* svenruppert/maven-3.1.1-zulu 1.11.0-1
+* svenruppert/maven-3.2.5-zulu 1.11.0-1
+* svenruppert/maven-3.3.9-zulu 1.11.0-1
+* svenruppert/maven-3.5.4-zulu 1.11.0-1
+* svenruppert/maven-3.6.0-zulu 1.11.0-1
+* svenruppert/maven-3.6.1-zulu 1.11.0-1
+* svenruppert/maven-3.6.2-zulu 1.11.0-1
+* svenruppert/maven-3.0.5-zulu 1.11.0-2
+* svenruppert/maven-3.1.1-zulu 1.11.0-2
+* svenruppert/maven-3.2.5-zulu 1.11.0-2
+* svenruppert/maven-3.3.9-zulu 1.11.0-2
+* svenruppert/maven-3.5.4-zulu 1.11.0-2
+* svenruppert/maven-3.6.0-zulu 1.11.0-2
+* svenruppert/maven-3.6.1-zulu 1.11.0-2
+* svenruppert/maven-3.6.2-zulu 1.11.0-2
+* svenruppert/maven-3.0.5-zulu 1.11.0-3
+* svenruppert/maven-3.1.1-zulu 1.11.0-3
+* svenruppert/maven-3.2.5-zulu 1.11.0-3
+* svenruppert/maven-3.3.9-zulu 1.11.0-3
+* svenruppert/maven-3.5.4-zulu 1.11.0-3
+* svenruppert/maven-3.6.0-zulu 1.11.0-3
+* svenruppert/maven-3.6.1-zulu 1.11.0-3
+* svenruppert/maven-3.6.2-zulu 1.11.0-3
+* svenruppert/maven-3.0.5-zulu 1.11.0
+* svenruppert/maven-3.1.1-zulu 1.11.0
+* svenruppert/maven-3.2.5-zulu 1.11.0
+* svenruppert/maven-3.3.9-zulu 1.11.0
+* svenruppert/maven-3.5.4-zulu 1.11.0
+* svenruppert/maven-3.6.0-zulu 1.11.0
+* svenruppert/maven-3.6.1-zulu 1.11.0
+* svenruppert/maven-3.6.2-zulu 1.11.0
+* svenruppert/maven-3.0.5-zulu 1.12.0-1
+* svenruppert/maven-3.1.1-zulu 1.12.0-1
+* svenruppert/maven-3.2.5-zulu 1.12.0-1
+* svenruppert/maven-3.3.9-zulu 1.12.0-1
+* svenruppert/maven-3.5.4-zulu 1.12.0-1
+* svenruppert/maven-3.6.0-zulu 1.12.0-1
+* svenruppert/maven-3.6.1-zulu 1.12.0-1
+* svenruppert/maven-3.6.2-zulu 1.12.0-1
+* svenruppert/maven-3.0.5-zulu 1.12.0
+* svenruppert/maven-3.1.1-zulu 1.12.0
+* svenruppert/maven-3.2.5-zulu 1.12.0
+* svenruppert/maven-3.3.9-zulu 1.12.0
+* svenruppert/maven-3.5.4-zulu 1.12.0
+* svenruppert/maven-3.6.0-zulu 1.12.0
+* svenruppert/maven-3.6.1-zulu 1.12.0
+* svenruppert/maven-3.6.2-zulu 1.12.0
+* svenruppert/maven-3.0.5-zulu 1.6.103
+* svenruppert/maven-3.1.1-zulu 1.6.103
+* svenruppert/maven-3.2.5-zulu 1.6.103
+* svenruppert/maven-3.3.9-zulu 1.6.103
+* svenruppert/maven-3.5.4-zulu 1.6.103
+* svenruppert/maven-3.6.0-zulu 1.6.103
+* svenruppert/maven-3.6.1-zulu 1.6.103
+* svenruppert/maven-3.6.2-zulu 1.6.103
+* svenruppert/maven-3.0.5-zulu 1.6.107
+* svenruppert/maven-3.1.1-zulu 1.6.107
+* svenruppert/maven-3.2.5-zulu 1.6.107
+* svenruppert/maven-3.3.9-zulu 1.6.107
+* svenruppert/maven-3.5.4-zulu 1.6.107
+* svenruppert/maven-3.6.0-zulu 1.6.107
+* svenruppert/maven-3.6.1-zulu 1.6.107
+* svenruppert/maven-3.6.2-zulu 1.6.107
+* svenruppert/maven-3.0.5-zulu 1.6.113
+* svenruppert/maven-3.1.1-zulu 1.6.113
+* svenruppert/maven-3.2.5-zulu 1.6.113
+* svenruppert/maven-3.3.9-zulu 1.6.113
+* svenruppert/maven-3.5.4-zulu 1.6.113
+* svenruppert/maven-3.6.0-zulu 1.6.113
+* svenruppert/maven-3.6.1-zulu 1.6.113
+* svenruppert/maven-3.6.2-zulu 1.6.113
+* svenruppert/maven-3.0.5-zulu 1.6.119
+* svenruppert/maven-3.1.1-zulu 1.6.119
+* svenruppert/maven-3.2.5-zulu 1.6.119
+* svenruppert/maven-3.3.9-zulu 1.6.119
+* svenruppert/maven-3.5.4-zulu 1.6.119
+* svenruppert/maven-3.6.0-zulu 1.6.119
+* svenruppert/maven-3.6.1-zulu 1.6.119
+* svenruppert/maven-3.6.2-zulu 1.6.119
+* svenruppert/maven-3.0.5-zulu 1.6.77
+* svenruppert/maven-3.1.1-zulu 1.6.77
+* svenruppert/maven-3.2.5-zulu 1.6.77
+* svenruppert/maven-3.3.9-zulu 1.6.77
+* svenruppert/maven-3.5.4-zulu 1.6.77
+* svenruppert/maven-3.6.0-zulu 1.6.77
+* svenruppert/maven-3.6.1-zulu 1.6.77
+* svenruppert/maven-3.6.2-zulu 1.6.77
+* svenruppert/maven-3.0.5-zulu 1.6.79
+* svenruppert/maven-3.1.1-zulu 1.6.79
+* svenruppert/maven-3.2.5-zulu 1.6.79
+* svenruppert/maven-3.3.9-zulu 1.6.79
+* svenruppert/maven-3.5.4-zulu 1.6.79
+* svenruppert/maven-3.6.0-zulu 1.6.79
+* svenruppert/maven-3.6.1-zulu 1.6.79
+* svenruppert/maven-3.6.2-zulu 1.6.79
+* svenruppert/maven-3.0.5-zulu 1.6.83
+* svenruppert/maven-3.1.1-zulu 1.6.83
+* svenruppert/maven-3.2.5-zulu 1.6.83
+* svenruppert/maven-3.3.9-zulu 1.6.83
+* svenruppert/maven-3.5.4-zulu 1.6.83
+* svenruppert/maven-3.6.0-zulu 1.6.83
+* svenruppert/maven-3.6.1-zulu 1.6.83
+* svenruppert/maven-3.6.2-zulu 1.6.83
+* svenruppert/maven-3.0.5-zulu 1.6.87
+* svenruppert/maven-3.1.1-zulu 1.6.87
+* svenruppert/maven-3.2.5-zulu 1.6.87
+* svenruppert/maven-3.3.9-zulu 1.6.87
+* svenruppert/maven-3.5.4-zulu 1.6.87
+* svenruppert/maven-3.6.0-zulu 1.6.87
+* svenruppert/maven-3.6.1-zulu 1.6.87
+* svenruppert/maven-3.6.2-zulu 1.6.87
+* svenruppert/maven-3.0.5-zulu 1.6.89
+* svenruppert/maven-3.1.1-zulu 1.6.89
+* svenruppert/maven-3.2.5-zulu 1.6.89
+* svenruppert/maven-3.3.9-zulu 1.6.89
+* svenruppert/maven-3.5.4-zulu 1.6.89
+* svenruppert/maven-3.6.0-zulu 1.6.89
+* svenruppert/maven-3.6.1-zulu 1.6.89
+* svenruppert/maven-3.6.2-zulu 1.6.89
+* svenruppert/maven-3.0.5-zulu 1.6.93
+* svenruppert/maven-3.1.1-zulu 1.6.93
+* svenruppert/maven-3.2.5-zulu 1.6.93
+* svenruppert/maven-3.3.9-zulu 1.6.93
+* svenruppert/maven-3.5.4-zulu 1.6.93
+* svenruppert/maven-3.6.0-zulu 1.6.93
+* svenruppert/maven-3.6.1-zulu 1.6.93
+* svenruppert/maven-3.6.2-zulu 1.6.93
+* svenruppert/maven-3.0.5-zulu 1.6.97
+* svenruppert/maven-3.1.1-zulu 1.6.97
+* svenruppert/maven-3.2.5-zulu 1.6.97
+* svenruppert/maven-3.3.9-zulu 1.6.97
+* svenruppert/maven-3.5.4-zulu 1.6.97
+* svenruppert/maven-3.6.0-zulu 1.6.97
+* svenruppert/maven-3.6.1-zulu 1.6.97
+* svenruppert/maven-3.6.2-zulu 1.6.97
+* svenruppert/maven-3.0.5-zulu 1.6.99
+* svenruppert/maven-3.1.1-zulu 1.6.99
+* svenruppert/maven-3.2.5-zulu 1.6.99
+* svenruppert/maven-3.3.9-zulu 1.6.99
+* svenruppert/maven-3.5.4-zulu 1.6.99
+* svenruppert/maven-3.6.0-zulu 1.6.99
+* svenruppert/maven-3.6.1-zulu 1.6.99
+* svenruppert/maven-3.6.2-zulu 1.6.99
+* svenruppert/maven-3.0.5-zulu 1.7.101
+* svenruppert/maven-3.1.1-zulu 1.7.101
+* svenruppert/maven-3.2.5-zulu 1.7.101
+* svenruppert/maven-3.3.9-zulu 1.7.101
+* svenruppert/maven-3.5.4-zulu 1.7.101
+* svenruppert/maven-3.6.0-zulu 1.7.101
+* svenruppert/maven-3.6.1-zulu 1.7.101
+* svenruppert/maven-3.6.2-zulu 1.7.101
+* svenruppert/maven-3.0.5-zulu 1.7.111
+* svenruppert/maven-3.1.1-zulu 1.7.111
+* svenruppert/maven-3.2.5-zulu 1.7.111
+* svenruppert/maven-3.3.9-zulu 1.7.111
+* svenruppert/maven-3.5.4-zulu 1.7.111
+* svenruppert/maven-3.6.0-zulu 1.7.111
+* svenruppert/maven-3.6.1-zulu 1.7.111
+* svenruppert/maven-3.6.2-zulu 1.7.111
+* svenruppert/maven-3.0.5-zulu 1.7.121
+* svenruppert/maven-3.1.1-zulu 1.7.121
+* svenruppert/maven-3.2.5-zulu 1.7.121
+* svenruppert/maven-3.3.9-zulu 1.7.121
+* svenruppert/maven-3.5.4-zulu 1.7.121
+* svenruppert/maven-3.6.0-zulu 1.7.121
+* svenruppert/maven-3.6.1-zulu 1.7.121
+* svenruppert/maven-3.6.2-zulu 1.7.121
+* svenruppert/maven-3.0.5-zulu 1.7.131
+* svenruppert/maven-3.1.1-zulu 1.7.131
+* svenruppert/maven-3.2.5-zulu 1.7.131
+* svenruppert/maven-3.3.9-zulu 1.7.131
+* svenruppert/maven-3.5.4-zulu 1.7.131
+* svenruppert/maven-3.6.0-zulu 1.7.131
+* svenruppert/maven-3.6.1-zulu 1.7.131
+* svenruppert/maven-3.6.2-zulu 1.7.131
+* svenruppert/maven-3.0.5-zulu 1.7.141
+* svenruppert/maven-3.1.1-zulu 1.7.141
+* svenruppert/maven-3.2.5-zulu 1.7.141
+* svenruppert/maven-3.3.9-zulu 1.7.141
+* svenruppert/maven-3.5.4-zulu 1.7.141
+* svenruppert/maven-3.6.0-zulu 1.7.141
+* svenruppert/maven-3.6.1-zulu 1.7.141
+* svenruppert/maven-3.6.2-zulu 1.7.141
+* svenruppert/maven-3.0.5-zulu 1.7.154
+* svenruppert/maven-3.1.1-zulu 1.7.154
+* svenruppert/maven-3.2.5-zulu 1.7.154
+* svenruppert/maven-3.3.9-zulu 1.7.154
+* svenruppert/maven-3.5.4-zulu 1.7.154
+* svenruppert/maven-3.6.0-zulu 1.7.154
+* svenruppert/maven-3.6.1-zulu 1.7.154
+* svenruppert/maven-3.6.2-zulu 1.7.154
+* svenruppert/maven-3.0.5-zulu 1.7.161
+* svenruppert/maven-3.1.1-zulu 1.7.161
+* svenruppert/maven-3.2.5-zulu 1.7.161
+* svenruppert/maven-3.3.9-zulu 1.7.161
+* svenruppert/maven-3.5.4-zulu 1.7.161
+* svenruppert/maven-3.6.0-zulu 1.7.161
+* svenruppert/maven-3.6.1-zulu 1.7.161
+* svenruppert/maven-3.6.2-zulu 1.7.161
+* svenruppert/maven-3.0.5-zulu 1.7.171
+* svenruppert/maven-3.1.1-zulu 1.7.171
+* svenruppert/maven-3.2.5-zulu 1.7.171
+* svenruppert/maven-3.3.9-zulu 1.7.171
+* svenruppert/maven-3.5.4-zulu 1.7.171
+* svenruppert/maven-3.6.0-zulu 1.7.171
+* svenruppert/maven-3.6.1-zulu 1.7.171
+* svenruppert/maven-3.6.2-zulu 1.7.171
+* svenruppert/maven-3.0.5-zulu 1.7.181
+* svenruppert/maven-3.1.1-zulu 1.7.181
+* svenruppert/maven-3.2.5-zulu 1.7.181
+* svenruppert/maven-3.3.9-zulu 1.7.181
+* svenruppert/maven-3.5.4-zulu 1.7.181
+* svenruppert/maven-3.6.0-zulu 1.7.181
+* svenruppert/maven-3.6.1-zulu 1.7.181
+* svenruppert/maven-3.6.2-zulu 1.7.181
+* svenruppert/maven-3.0.5-zulu 1.7.191
+* svenruppert/maven-3.1.1-zulu 1.7.191
+* svenruppert/maven-3.2.5-zulu 1.7.191
+* svenruppert/maven-3.3.9-zulu 1.7.191
+* svenruppert/maven-3.5.4-zulu 1.7.191
+* svenruppert/maven-3.6.0-zulu 1.7.191
+* svenruppert/maven-3.6.1-zulu 1.7.191
+* svenruppert/maven-3.6.2-zulu 1.7.191
+* svenruppert/maven-3.0.5-zulu 1.7.201
+* svenruppert/maven-3.1.1-zulu 1.7.201
+* svenruppert/maven-3.2.5-zulu 1.7.201
+* svenruppert/maven-3.3.9-zulu 1.7.201
+* svenruppert/maven-3.5.4-zulu 1.7.201
+* svenruppert/maven-3.6.0-zulu 1.7.201
+* svenruppert/maven-3.6.1-zulu 1.7.201
+* svenruppert/maven-3.6.2-zulu 1.7.201
+* svenruppert/maven-3.0.5-zulu 1.7.211
+* svenruppert/maven-3.1.1-zulu 1.7.211
+* svenruppert/maven-3.2.5-zulu 1.7.211
+* svenruppert/maven-3.3.9-zulu 1.7.211
+* svenruppert/maven-3.5.4-zulu 1.7.211
+* svenruppert/maven-3.6.0-zulu 1.7.211
+* svenruppert/maven-3.6.1-zulu 1.7.211
+* svenruppert/maven-3.6.2-zulu 1.7.211
+* svenruppert/maven-3.0.5-zulu 1.7.222
+* svenruppert/maven-3.1.1-zulu 1.7.222
+* svenruppert/maven-3.2.5-zulu 1.7.222
+* svenruppert/maven-3.3.9-zulu 1.7.222
+* svenruppert/maven-3.5.4-zulu 1.7.222
+* svenruppert/maven-3.6.0-zulu 1.7.222
+* svenruppert/maven-3.6.1-zulu 1.7.222
+* svenruppert/maven-3.6.2-zulu 1.7.222
+* svenruppert/maven-3.0.5-zulu 1.7.95
+* svenruppert/maven-3.1.1-zulu 1.7.95
+* svenruppert/maven-3.2.5-zulu 1.7.95
+* svenruppert/maven-3.3.9-zulu 1.7.95
+* svenruppert/maven-3.5.4-zulu 1.7.95
+* svenruppert/maven-3.6.0-zulu 1.7.95
+* svenruppert/maven-3.6.1-zulu 1.7.95
+* svenruppert/maven-3.6.2-zulu 1.7.95
+* svenruppert/maven-3.0.5-zulu 1.8.102
+* svenruppert/maven-3.1.1-zulu 1.8.102
+* svenruppert/maven-3.2.5-zulu 1.8.102
+* svenruppert/maven-3.3.9-zulu 1.8.102
+* svenruppert/maven-3.5.4-zulu 1.8.102
+* svenruppert/maven-3.6.0-zulu 1.8.102
+* svenruppert/maven-3.6.1-zulu 1.8.102
+* svenruppert/maven-3.6.2-zulu 1.8.102
+* svenruppert/maven-3.0.5-zulu 1.8.112
+* svenruppert/maven-3.1.1-zulu 1.8.112
+* svenruppert/maven-3.2.5-zulu 1.8.112
+* svenruppert/maven-3.3.9-zulu 1.8.112
+* svenruppert/maven-3.5.4-zulu 1.8.112
+* svenruppert/maven-3.6.0-zulu 1.8.112
+* svenruppert/maven-3.6.1-zulu 1.8.112
+* svenruppert/maven-3.6.2-zulu 1.8.112
+* svenruppert/maven-3.0.5-zulu 1.8.121
+* svenruppert/maven-3.1.1-zulu 1.8.121
+* svenruppert/maven-3.2.5-zulu 1.8.121
+* svenruppert/maven-3.3.9-zulu 1.8.121
+* svenruppert/maven-3.5.4-zulu 1.8.121
+* svenruppert/maven-3.6.0-zulu 1.8.121
+* svenruppert/maven-3.6.1-zulu 1.8.121
+* svenruppert/maven-3.6.2-zulu 1.8.121
+* svenruppert/maven-3.0.5-zulu 1.8.131
+* svenruppert/maven-3.1.1-zulu 1.8.131
+* svenruppert/maven-3.2.5-zulu 1.8.131
+* svenruppert/maven-3.3.9-zulu 1.8.131
+* svenruppert/maven-3.5.4-zulu 1.8.131
+* svenruppert/maven-3.6.0-zulu 1.8.131
+* svenruppert/maven-3.6.1-zulu 1.8.131
+* svenruppert/maven-3.6.2-zulu 1.8.131
+* svenruppert/maven-3.0.5-zulu 1.8.144
+* svenruppert/maven-3.1.1-zulu 1.8.144
+* svenruppert/maven-3.2.5-zulu 1.8.144
+* svenruppert/maven-3.3.9-zulu 1.8.144
+* svenruppert/maven-3.5.4-zulu 1.8.144
+* svenruppert/maven-3.6.0-zulu 1.8.144
+* svenruppert/maven-3.6.1-zulu 1.8.144
+* svenruppert/maven-3.6.2-zulu 1.8.144
+* svenruppert/maven-3.0.5-zulu 1.8.152
+* svenruppert/maven-3.1.1-zulu 1.8.152
+* svenruppert/maven-3.2.5-zulu 1.8.152
+* svenruppert/maven-3.3.9-zulu 1.8.152
+* svenruppert/maven-3.5.4-zulu 1.8.152
+* svenruppert/maven-3.6.0-zulu 1.8.152
+* svenruppert/maven-3.6.1-zulu 1.8.152
+* svenruppert/maven-3.6.2-zulu 1.8.152
+* svenruppert/maven-3.0.5-zulu 1.8.162
+* svenruppert/maven-3.1.1-zulu 1.8.162
+* svenruppert/maven-3.2.5-zulu 1.8.162
+* svenruppert/maven-3.3.9-zulu 1.8.162
+* svenruppert/maven-3.5.4-zulu 1.8.162
+* svenruppert/maven-3.6.0-zulu 1.8.162
+* svenruppert/maven-3.6.1-zulu 1.8.162
+* svenruppert/maven-3.6.2-zulu 1.8.162
+* svenruppert/maven-3.0.5-zulu 1.8.163
+* svenruppert/maven-3.1.1-zulu 1.8.163
+* svenruppert/maven-3.2.5-zulu 1.8.163
+* svenruppert/maven-3.3.9-zulu 1.8.163
+* svenruppert/maven-3.5.4-zulu 1.8.163
+* svenruppert/maven-3.6.0-zulu 1.8.163
+* svenruppert/maven-3.6.1-zulu 1.8.163
+* svenruppert/maven-3.6.2-zulu 1.8.163
+* svenruppert/maven-3.0.5-zulu 1.8.172
+* svenruppert/maven-3.1.1-zulu 1.8.172
+* svenruppert/maven-3.2.5-zulu 1.8.172
+* svenruppert/maven-3.3.9-zulu 1.8.172
+* svenruppert/maven-3.5.4-zulu 1.8.172
+* svenruppert/maven-3.6.0-zulu 1.8.172
+* svenruppert/maven-3.6.1-zulu 1.8.172
+* svenruppert/maven-3.6.2-zulu 1.8.172
+* svenruppert/maven-3.0.5-zulu 1.8.181
+* svenruppert/maven-3.1.1-zulu 1.8.181
+* svenruppert/maven-3.2.5-zulu 1.8.181
+* svenruppert/maven-3.3.9-zulu 1.8.181
+* svenruppert/maven-3.5.4-zulu 1.8.181
+* svenruppert/maven-3.6.0-zulu 1.8.181
+* svenruppert/maven-3.6.1-zulu 1.8.181
+* svenruppert/maven-3.6.2-zulu 1.8.181
+* svenruppert/maven-3.0.5-zulu 1.8.192
+* svenruppert/maven-3.1.1-zulu 1.8.192
+* svenruppert/maven-3.2.5-zulu 1.8.192
+* svenruppert/maven-3.3.9-zulu 1.8.192
+* svenruppert/maven-3.5.4-zulu 1.8.192
+* svenruppert/maven-3.6.0-zulu 1.8.192
+* svenruppert/maven-3.6.1-zulu 1.8.192
+* svenruppert/maven-3.6.2-zulu 1.8.192
+* svenruppert/maven-3.0.5-zulu 1.8.201
+* svenruppert/maven-3.1.1-zulu 1.8.201
+* svenruppert/maven-3.2.5-zulu 1.8.201
+* svenruppert/maven-3.3.9-zulu 1.8.201
+* svenruppert/maven-3.5.4-zulu 1.8.201
+* svenruppert/maven-3.6.0-zulu 1.8.201
+* svenruppert/maven-3.6.1-zulu 1.8.201
+* svenruppert/maven-3.6.2-zulu 1.8.201
+* svenruppert/maven-3.0.5-zulu 1.8.202
+* svenruppert/maven-3.1.1-zulu 1.8.202
+* svenruppert/maven-3.2.5-zulu 1.8.202
+* svenruppert/maven-3.3.9-zulu 1.8.202
+* svenruppert/maven-3.5.4-zulu 1.8.202
+* svenruppert/maven-3.6.0-zulu 1.8.202
+* svenruppert/maven-3.6.1-zulu 1.8.202
+* svenruppert/maven-3.6.2-zulu 1.8.202
+* svenruppert/maven-3.0.5-zulu 1.8.212
+* svenruppert/maven-3.1.1-zulu 1.8.212
+* svenruppert/maven-3.2.5-zulu 1.8.212
+* svenruppert/maven-3.3.9-zulu 1.8.212
+* svenruppert/maven-3.5.4-zulu 1.8.212
+* svenruppert/maven-3.6.0-zulu 1.8.212
+* svenruppert/maven-3.6.1-zulu 1.8.212
+* svenruppert/maven-3.6.2-zulu 1.8.212
+* svenruppert/maven-3.0.5-zulu 1.8.71
+* svenruppert/maven-3.1.1-zulu 1.8.71
+* svenruppert/maven-3.2.5-zulu 1.8.71
+* svenruppert/maven-3.3.9-zulu 1.8.71
+* svenruppert/maven-3.5.4-zulu 1.8.71
+* svenruppert/maven-3.6.0-zulu 1.8.71
+* svenruppert/maven-3.6.1-zulu 1.8.71
+* svenruppert/maven-3.6.2-zulu 1.8.71
+* svenruppert/maven-3.0.5-zulu 1.8.72
+* svenruppert/maven-3.1.1-zulu 1.8.72
+* svenruppert/maven-3.2.5-zulu 1.8.72
+* svenruppert/maven-3.3.9-zulu 1.8.72
+* svenruppert/maven-3.5.4-zulu 1.8.72
+* svenruppert/maven-3.6.0-zulu 1.8.72
+* svenruppert/maven-3.6.1-zulu 1.8.72
+* svenruppert/maven-3.6.2-zulu 1.8.72
+* svenruppert/maven-3.0.5-zulu 1.8.91
+* svenruppert/maven-3.1.1-zulu 1.8.91
+* svenruppert/maven-3.2.5-zulu 1.8.91
+* svenruppert/maven-3.3.9-zulu 1.8.91
+* svenruppert/maven-3.5.4-zulu 1.8.91
+* svenruppert/maven-3.6.0-zulu 1.8.91
+* svenruppert/maven-3.6.1-zulu 1.8.91
+* svenruppert/maven-3.6.2-zulu 1.8.91
+* svenruppert/maven-3.0.5-zulu 1.8.92
+* svenruppert/maven-3.1.1-zulu 1.8.92
+* svenruppert/maven-3.2.5-zulu 1.8.92
+* svenruppert/maven-3.3.9-zulu 1.8.92
+* svenruppert/maven-3.5.4-zulu 1.8.92
+* svenruppert/maven-3.6.0-zulu 1.8.92
+* svenruppert/maven-3.6.1-zulu 1.8.92
+* svenruppert/maven-3.6.2-zulu 1.8.92
+* svenruppert/maven-3.0.5-zulu 1.9.0-0
+* svenruppert/maven-3.1.1-zulu 1.9.0-0
+* svenruppert/maven-3.2.5-zulu 1.9.0-0
+* svenruppert/maven-3.3.9-zulu 1.9.0-0
+* svenruppert/maven-3.5.4-zulu 1.9.0-0
+* svenruppert/maven-3.6.0-zulu 1.9.0-0
+* svenruppert/maven-3.6.1-zulu 1.9.0-0
+* svenruppert/maven-3.6.2-zulu 1.9.0-0
+* svenruppert/maven-3.0.5-zulu 1.9.0-1
+* svenruppert/maven-3.1.1-zulu 1.9.0-1
+* svenruppert/maven-3.2.5-zulu 1.9.0-1
+* svenruppert/maven-3.3.9-zulu 1.9.0-1
+* svenruppert/maven-3.5.4-zulu 1.9.0-1
+* svenruppert/maven-3.6.0-zulu 1.9.0-1
+* svenruppert/maven-3.6.1-zulu 1.9.0-1
+* svenruppert/maven-3.6.2-zulu 1.9.0-1
+* svenruppert/maven-3.0.5-zulu 1.9.0
+* svenruppert/maven-3.1.1-zulu 1.9.0
+* svenruppert/maven-3.2.5-zulu 1.9.0
+* svenruppert/maven-3.3.9-zulu 1.9.0
+* svenruppert/maven-3.5.4-zulu 1.9.0
+* svenruppert/maven-3.6.0-zulu 1.9.0
+* svenruppert/maven-3.6.1-zulu 1.9.0
+* svenruppert/maven-3.6.2-zulu 1.9.0
+* svenruppert/maven-3.0.5-zulu 1.9.0-4
+* svenruppert/maven-3.1.1-zulu 1.9.0-4
+* svenruppert/maven-3.2.5-zulu 1.9.0-4
+* svenruppert/maven-3.3.9-zulu 1.9.0-4
+* svenruppert/maven-3.5.4-zulu 1.9.0-4
+* svenruppert/maven-3.6.0-zulu 1.9.0-4
+* svenruppert/maven-3.6.1-zulu 1.9.0-4
+* svenruppert/maven-3.6.2-zulu 1.9.0-4
+* svenruppert/maven-3.0.5-zulu 1.9.0-7
+* svenruppert/maven-3.1.1-zulu 1.9.0-7
+* svenruppert/maven-3.2.5-zulu 1.9.0-7
+* svenruppert/maven-3.3.9-zulu 1.9.0-7
+* svenruppert/maven-3.5.4-zulu 1.9.0-7
+* svenruppert/maven-3.6.0-zulu 1.9.0-7
+* svenruppert/maven-3.6.1-zulu 1.9.0-7
+* svenruppert/maven-3.6.2-zulu 1.9.0-7
+
+
+
+
 
 
 ## ToDo 
