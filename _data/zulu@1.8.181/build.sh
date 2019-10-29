@@ -12,4 +12,7 @@ else
 
     docker tag svenruppert/zulu:latest svenruppert/zulu:1.8.181
     docker push svenruppert/zulu:1.8.181
-fi
+
+fi 
+    docker image rm svenruppert/zulu:latest
+    docker image rm svenruppert/zulu:1.8.181

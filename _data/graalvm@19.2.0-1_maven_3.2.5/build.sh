@@ -11,4 +11,6 @@ else
     docker build -t svenruppert/maven-3.2.5-graalvm .
     docker tag svenruppert/maven-3.2.5-graalvm:latest svenruppert/maven-3.2.5-graalvm:19.2.0-1
     docker push svenruppert/maven-3.2.5-graalvm:19.2.0-1
-fi
+fi 
+    docker image rm svenruppert/maven-3.2.5-graalvm:latest
+    docker image rm svenruppert/maven-3.2.5-graalvm:19.2.0-1

@@ -12,4 +12,7 @@ else
 
     docker tag svenruppert/openjdk-shenandoah:latest svenruppert/openjdk-shenandoah:1.8.0
     docker push svenruppert/openjdk-shenandoah:1.8.0
-fi
+
+fi 
+    docker image rm svenruppert/openjdk-shenandoah:latest
+    docker image rm svenruppert/openjdk-shenandoah:1.8.0

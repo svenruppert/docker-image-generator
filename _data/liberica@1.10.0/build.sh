@@ -12,4 +12,7 @@ else
 
     docker tag svenruppert/liberica:latest svenruppert/liberica:1.10.0
     docker push svenruppert/liberica:1.10.0
-fi
+
+fi 
+    docker image rm svenruppert/liberica:latest
+    docker image rm svenruppert/liberica:1.10.0

@@ -12,4 +12,7 @@ else
 
     docker tag svenruppert/ibm:latest svenruppert/ibm:1.7.1-4.50
     docker push svenruppert/ibm:1.7.1-4.50
-fi
+
+fi 
+    docker image rm svenruppert/ibm:latest
+    docker image rm svenruppert/ibm:1.7.1-4.50

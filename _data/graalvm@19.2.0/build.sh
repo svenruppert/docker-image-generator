@@ -12,4 +12,7 @@ else
 
     docker tag svenruppert/graalvm:latest svenruppert/graalvm:19.2.0
     docker push svenruppert/graalvm:19.2.0
-fi
+
+fi 
+    docker image rm svenruppert/graalvm:latest
+    docker image rm svenruppert/graalvm:19.2.0

@@ -11,4 +11,6 @@ else
     docker build -t svenruppert/maven-3.2.5-liberica .
     docker tag svenruppert/maven-3.2.5-liberica:latest svenruppert/maven-3.2.5-liberica:1.10.0-2
     docker push svenruppert/maven-3.2.5-liberica:1.10.0-2
-fi
+fi 
+    docker image rm svenruppert/maven-3.2.5-liberica:latest
+    docker image rm svenruppert/maven-3.2.5-liberica:1.10.0-2

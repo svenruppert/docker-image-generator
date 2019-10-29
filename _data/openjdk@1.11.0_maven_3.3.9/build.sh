@@ -11,4 +11,6 @@ else
     docker build -t svenruppert/maven-3.3.9-openjdk .
     docker tag svenruppert/maven-3.3.9-openjdk:latest svenruppert/maven-3.3.9-openjdk:1.11.0
     docker push svenruppert/maven-3.3.9-openjdk:1.11.0
-fi
+fi 
+    docker image rm svenruppert/maven-3.3.9-openjdk:latest
+    docker image rm svenruppert/maven-3.3.9-openjdk:1.11.0

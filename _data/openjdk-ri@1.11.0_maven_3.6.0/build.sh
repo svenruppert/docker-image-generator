@@ -11,4 +11,6 @@ else
     docker build -t svenruppert/maven-3.6.0-openjdk-ri .
     docker tag svenruppert/maven-3.6.0-openjdk-ri:latest svenruppert/maven-3.6.0-openjdk-ri:1.11.0
     docker push svenruppert/maven-3.6.0-openjdk-ri:1.11.0
-fi
+fi 
+    docker image rm svenruppert/maven-3.6.0-openjdk-ri:latest
+    docker image rm svenruppert/maven-3.6.0-openjdk-ri:1.11.0

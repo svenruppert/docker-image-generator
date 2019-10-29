@@ -11,4 +11,6 @@ else
     docker build -t svenruppert/maven-3.2.5-zulu .
     docker tag svenruppert/maven-3.2.5-zulu:latest svenruppert/maven-3.2.5-zulu:1.11.0-1
     docker push svenruppert/maven-3.2.5-zulu:1.11.0-1
-fi
+fi 
+    docker image rm svenruppert/maven-3.2.5-zulu:latest
+    docker image rm svenruppert/maven-3.2.5-zulu:1.11.0-1

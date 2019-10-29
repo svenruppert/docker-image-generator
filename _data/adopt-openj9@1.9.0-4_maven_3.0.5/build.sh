@@ -11,4 +11,6 @@ else
     docker build -t svenruppert/maven-3.0.5-adopt-openj9 .
     docker tag svenruppert/maven-3.0.5-adopt-openj9:latest svenruppert/maven-3.0.5-adopt-openj9:1.9.0-4
     docker push svenruppert/maven-3.0.5-adopt-openj9:1.9.0-4
-fi
+fi 
+    docker image rm svenruppert/maven-3.0.5-adopt-openj9:latest
+    docker image rm svenruppert/maven-3.0.5-adopt-openj9:1.9.0-4

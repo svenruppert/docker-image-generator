@@ -12,4 +12,7 @@ else
 
     docker tag svenruppert/openjdk-ri:latest svenruppert/openjdk-ri:1.12.0
     docker push svenruppert/openjdk-ri:1.12.0
-fi
+
+fi 
+    docker image rm svenruppert/openjdk-ri:latest
+    docker image rm svenruppert/openjdk-ri:1.12.0

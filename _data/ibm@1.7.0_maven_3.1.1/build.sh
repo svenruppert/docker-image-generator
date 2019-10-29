@@ -11,4 +11,6 @@ else
     docker build -t svenruppert/maven-3.1.1-ibm .
     docker tag svenruppert/maven-3.1.1-ibm:latest svenruppert/maven-3.1.1-ibm:1.7.0
     docker push svenruppert/maven-3.1.1-ibm:1.7.0
-fi
+fi 
+    docker image rm svenruppert/maven-3.1.1-ibm:latest
+    docker image rm svenruppert/maven-3.1.1-ibm:1.7.0

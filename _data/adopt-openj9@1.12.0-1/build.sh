@@ -12,4 +12,7 @@ else
 
     docker tag svenruppert/adopt-openj9:latest svenruppert/adopt-openj9:1.12.0-1
     docker push svenruppert/adopt-openj9:1.12.0-1
-fi
+
+fi 
+    docker image rm svenruppert/adopt-openj9:latest
+    docker image rm svenruppert/adopt-openj9:1.12.0-1

@@ -12,4 +12,7 @@ else
 
     docker tag svenruppert/adopt:latest svenruppert/adopt:1.11.0-2
     docker push svenruppert/adopt:1.11.0-2
-fi
+
+fi 
+    docker image rm svenruppert/adopt:latest
+    docker image rm svenruppert/adopt:1.11.0-2

@@ -11,4 +11,6 @@ else
     docker build -t svenruppert/maven-3.6.1-openjdk-shenandoah .
     docker tag svenruppert/maven-3.6.1-openjdk-shenandoah:latest svenruppert/maven-3.6.1-openjdk-shenandoah:1.8.0
     docker push svenruppert/maven-3.6.1-openjdk-shenandoah:1.8.0
-fi
+fi 
+    docker image rm svenruppert/maven-3.6.1-openjdk-shenandoah:latest
+    docker image rm svenruppert/maven-3.6.1-openjdk-shenandoah:1.8.0
