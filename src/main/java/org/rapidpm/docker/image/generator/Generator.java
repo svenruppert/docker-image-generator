@@ -20,10 +20,10 @@ public class Generator {
                                              + "\n"
                                              + "ARG MAVEN_VERSION={0}\n"
                                              + "ARG USER_HOME_DIR=\"/root\"\n"
-                                             + "ARG BASE_URL=http://mirror.synyx.de/apache/maven/maven-3/{0}/binaries\n"
+                                             + "ARG BASE_URL=http://mirror.dkd.de/apache/maven/binaries/\n"
                                              + "\n"
                                              + "RUN mkdir -p /usr/share/maven /usr/share/maven/ref \\\n"
-                                             + "  && curl -o /tmp/apache-maven.tar.gz http://mirror.synyx.de/apache/maven/maven-3/{0}/binaries/apache-maven-{0}-bin.tar.gz \\\n"
+                                             + "  && curl -o /tmp/apache-maven.tar.gz http://mirror.dkd.de/apache/maven/binaries/apache-maven-{0}-bin.tar.gz \\\n"
                                              + "  && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1 \\\n"
                                              + "  && rm -f /tmp/apache-maven.tar.gz \\\n"
                                              + "  && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn\n"
@@ -353,9 +353,11 @@ public class Generator {
                                    + "ibm@1.8.0-5.40\n"
                                    + "ibm@1.8.0-5.6\n"
                                    + "ibm@1.7.1\n"
+                                   + "ibm@1.7.1-4.55\n"
                                    + "ibm@1.7.1-4.50\n"
                                    + "ibm@1.7.1-4.45\n"
                                    + "ibm@1.7.0\n"
+                                   + "ibm@1.7.0-10.55\n"
                                    + "ibm@1.7.0-10.50\n"
                                    + "ibm@1.7.0-10.45\n"
                                    + "liberica@1.13.0\n"
@@ -380,7 +382,7 @@ public class Generator {
                                    + "liberica@1.8.212\n"
                                    + "liberica@1.8.202\n"
                                    + "liberica@1.8.192\n"
-                                   + "openjdk@1.14.0-20\n"
+                                   + "openjdk@1.14.0-23\n"
                                    + "openjdk@1.13.0\n"
                                    + "openjdk@1.13.0-1\n"
                                    + "openjdk@1.12.0\n"
@@ -474,7 +476,7 @@ public class Generator {
                                    + "zulu@1.6.87\n"
                                    + "zulu@1.6.83\n"
                                    + "zulu@1.6.79\n"
-                                   + "zulu@1.6.77";
+                                   + "zulu@1.6.77\n";
 
 
 }
