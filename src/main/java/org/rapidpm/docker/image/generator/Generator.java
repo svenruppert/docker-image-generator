@@ -60,7 +60,7 @@ public class Generator {
                                           + "\n"
                                           + "ARG USER_HOME_DIR=\"/root\"\n"
                                           + "\n"
-                                          + "RUN curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | \\\n"
+                                          + "RUN curl -sL https://github.com/Jabba-Team/jabba/raw/main/install.sh | \\\n"
                                           + "    JABBA_COMMAND=\"install {1} -o /jdk\" bash\n"
                                           + "\n"
                                           + "ENV JAVA_HOME /jdk\n"
